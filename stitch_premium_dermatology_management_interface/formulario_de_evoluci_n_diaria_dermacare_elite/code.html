@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dermacare Elite - Registrar Evolución Clínica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadad9",
+                        "on-secondary-fixed": "#002113",
+                        "outline-variant": "#c5c6cd",
+                        "outline": "#75777d",
+                        "surface-container-high": "#e9e8e7",
+                        "border-subtle": "#E2E8F0",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#dbc39f",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#43341a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "slate-muted": "#898989",
+                        "secondary": "#006c48",
+                        "error": "#ba1a1a",
+                        "background": "#faf9f8",
+                        "secondary-container": "#7dfabf",
+                        "surface-container": "#eeeeed",
+                        "surface-bright": "#faf9f8",
+                        "surface-container-highest": "#e3e2e1",
+                        "inverse-primary": "#bdc7dc",
+                        "on-tertiary-container": "#b29c7b",
+                        "status-available": "#C6F6D5",
+                        "on-secondary-fixed-variant": "#005235",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#bdc7dc",
+                        "on-tertiary-fixed": "#261903",
+                        "inverse-on-surface": "#f1f0f0",
+                        "secondary-fixed": "#7dfabf",
+                        "surface": "#faf9f8",
+                        "secondary-fixed-dim": "#5fdda4",
+                        "surface-tint": "#555f71",
+                        "on-secondary-container": "#00734d",
+                        "tertiary-fixed": "#f8dfba",
+                        "status-reserved": "#FEEBC8",
+                        "surface-container-low": "#f4f3f2",
+                        "on-primary-container": "#96a0b5",
+                        "surface-variant": "#e3e2e1",
+                        "on-primary-fixed-variant": "#3d4759",
+                        "primary-container": "#2d3748",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#2c1f07",
+                        "status-confirmed": "#BEE3F8",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#121c2c",
+                        "on-tertiary-fixed-variant": "#554429",
+                        "primary": "#182232",
+                        "primary-fixed": "#d9e3f9",
+                        "inverse-surface": "#2f3130",
+                        "on-surface-variant": "#45474c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "margin-desktop": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-xs": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-xs": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen relative overflow-hidden">
+<!-- Background Medical Record Context (Blurred) -->
+<div class="absolute inset-0 z-0 opacity-40 blur-sm pointer-events-none p-margin-desktop grid grid-cols-12 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-12">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-6">Historia Clínica - Paciente</h1>
+<div class="bg-surface border border-border-subtle rounded-lg p-6 mb-6">
+<div class="h-4 bg-surface-variant rounded w-1/4 mb-4"></div>
+<div class="h-4 bg-surface-variant rounded w-full mb-2"></div>
+<div class="h-4 bg-surface-variant rounded w-5/6"></div>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface border border-border-subtle rounded-lg p-6 h-64"></div>
+<div class="bg-surface border border-border-subtle rounded-lg p-6 h-64"></div>
+</div>
+</div>
+</div>
+<!-- Overlay -->
+<div class="fixed inset-0 bg-primary/20 backdrop-blur-sm z-40 flex items-center justify-center p-margin-mobile md:p-margin-desktop">
+<!-- Modal Container -->
+<div aria-labelledby="modal-title" aria-modal="true" class="bg-surface rounded-xl shadow-[0px_20px_48px_rgba(0,0,0,0.08)] border border-border-subtle w-full max-w-3xl max-h-[921px] flex flex-col z-50 overflow-hidden" role="dialog">
+<!-- Header -->
+<div class="flex items-center justify-between px-6 py-4 border-b border-border-subtle bg-surface-bright">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary" id="modal-title">Registrar Evolución Clínica</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Paciente: Ana Martínez | Fecha: 24 Oct 2023</p>
+</div>
+<button aria-label="Close modal" class="text-outline hover:text-on-surface-variant transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Body -->
+<div class="flex-1 overflow-y-auto p-6 space-y-8 bg-surface">
+<!-- Detalles del Procedimiento -->
+<section>
+<h3 class="font-body-lg text-body-lg text-primary font-medium mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="medical_services">medical_services</span>
+                        Detalles del Procedimiento
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1" for="tipo_procedimiento">Tipo de Procedimiento</label>
+<select class="w-full bg-surface border-border-subtle rounded text-on-surface focus:ring-1 focus:ring-primary focus:border-primary py-2 px-3" id="tipo_procedimiento">
+<option>Láser Fraccionado CO2</option>
+<option>Peeling Químico</option>
+<option>Aplicación Toxina Botulínica</option>
+<option>Control Rutina</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1" for="zona_tratada">Zona Tratada</label>
+<input class="w-full bg-surface border-border-subtle rounded text-on-surface focus:ring-1 focus:ring-primary focus:border-primary py-2 px-3" id="zona_tratada" type="text" value="Rostro completo, énfasis en región periorbital"/>
+</div>
+</div>
+</section>
+<!-- Materiales Utilizados -->
+<section>
+<h3 class="font-body-lg text-body-lg text-primary font-medium mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="vaccines">vaccines</span>
+                        Materiales Utilizados
+                    </h3>
+<div class="bg-surface-container-low p-4 rounded border border-border-subtle">
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-full">
+                                Anestesia Tópica 5%
+                                <button class="hover:opacity-80"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-full">
+                                Suero Fisiológico 10ml
+                                <button class="hover:opacity-80"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-full">
+                                Gasa Estéril 10x10
+                                <button class="hover:opacity-80"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+</div>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface border-border-subtle rounded text-on-surface focus:ring-1 focus:ring-primary focus:border-primary py-1.5 px-3 font-body-md text-body-md" placeholder="Añadir material..." type="text"/>
+<button class="px-4 py-1.5 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded border border-border-subtle hover:bg-surface-container-high transition-colors">Añadir</button>
+</div>
+</div>
+</section>
+<!-- Observaciones Médicas -->
+<section>
+<h3 class="font-body-lg text-body-lg text-primary font-medium mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="edit_note">edit_note</span>
+                        Observaciones Médicas
+                    </h3>
+<textarea class="w-full bg-surface border-border-subtle rounded text-on-surface focus:ring-1 focus:ring-primary focus:border-primary py-3 px-4 resize-none font-body-md text-body-md" placeholder="Describa el desarrollo del procedimiento, respuesta del paciente, complicaciones (si las hubo) y recomendaciones post-operatorias..." rows="5"></textarea>
+</section>
+<!-- Firmas -->
+<section>
+<h3 class="font-body-lg text-body-lg text-primary font-medium mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="draw">draw</span>
+                        Firmas
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border-2 border-dashed border-border-subtle rounded-lg p-6 flex flex-col items-center justify-center text-center bg-surface-container-low min-h-[120px] cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-outline mb-2" data-icon="signature">signature</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Firma del Profesional</span>
+<span class="font-label-xs text-label-xs text-outline mt-1">Dr. Smith</span>
+</div>
+<div class="border-2 border-dashed border-border-subtle rounded-lg p-6 flex flex-col items-center justify-center text-center bg-surface-container-low min-h-[120px] opacity-60">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Firma del Paciente (Opcional)</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Actions -->
+<div class="px-6 py-4 border-t border-border-subtle bg-surface-bright flex justify-end gap-4">
+<button class="px-6 py-2 rounded font-label-sm text-label-sm border border-border-subtle text-on-surface hover:bg-surface-container-low transition-colors">
+                    Cancelar
+                </button>
+<button class="px-6 py-2 rounded font-label-sm text-label-sm bg-primary text-on-primary hover:bg-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="save">save</span>
+                    Guardar Evolución
+                </button>
+</div>
+</div>
+</div>
+</body></html>

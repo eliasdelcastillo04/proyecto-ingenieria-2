@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KPI Dashboard - Dermacare Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#182232",
+                        "on-background": "#1a1c1c",
+                        "tertiary-container": "#43341a",
+                        "background": "#faf9f8",
+                        "secondary-fixed": "#7dfabf",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#45474c",
+                        "status-confirmed": "#BEE3F8",
+                        "inverse-on-surface": "#f1f0f0",
+                        "status-reserved": "#FEEBC8",
+                        "slate-muted": "#898989",
+                        "secondary-fixed-dim": "#5fdda4",
+                        "tertiary": "#2c1f07",
+                        "surface-container": "#eeeeed",
+                        "border-subtle": "#E2E8F0",
+                        "secondary-container": "#7dfabf",
+                        "on-secondary-container": "#00734d",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary-fixed": "#002113",
+                        "surface-dim": "#dadad9",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed": "#d9e3f9",
+                        "on-tertiary-fixed-variant": "#554429",
+                        "status-available": "#C6F6D5",
+                        "on-primary-fixed": "#121c2c",
+                        "on-primary-fixed-variant": "#3d4759",
+                        "surface-container-low": "#f4f3f2",
+                        "surface-bright": "#faf9f8",
+                        "primary-container": "#2d3748",
+                        "inverse-surface": "#2f3130",
+                        "tertiary-fixed": "#f8dfba",
+                        "surface": "#faf9f8",
+                        "on-tertiary-container": "#b29c7b",
+                        "on-primary-container": "#96a0b5",
+                        "inverse-primary": "#bdc7dc",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777d",
+                        "on-tertiary-fixed": "#261903",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e3e2e1",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#bdc7dc",
+                        "on-error": "#ffffff",
+                        "secondary": "#006c48",
+                        "tertiary-fixed-dim": "#dbc39f",
+                        "on-secondary-fixed-variant": "#005235",
+                        "surface-tint": "#555f71",
+                        "outline-variant": "#c5c6cd",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin-desktop": "32px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-xs": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-xs": ["11px", { "lineHeight": "14px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f8; }
+        .chart-container { position: relative; height: 300px; width: 100%; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle, #E2E8F0);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-radius: 0.5rem;
+            padding: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen font-body-md text-body-md">
+<!-- SideNavBar -->
+<aside class="bg-surface border-r border-border-subtle h-screen w-64 fixed left-0 top-0 flex flex-col p-4 z-20">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Dermacare Elite Logo" class="w-10 h-10 object-cover rounded-full" data-alt="A clean, minimalist abstract logo design suitable for a premium clinical environment. The logo features geometric shapes and a refined color palette of slate blue and mint green, creating an elite professional look. High-end modern aesthetic, light mode friendly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMf06WjEzEueDiN1nNikBVYSzbkffi5bT-eVUmJ5v_wyi_pb_R1fytK6gvGUmR_gYQT2q8GrHc35DGQ67zv3bIrjMddk8Q36hRckVqz9DXtWf8tg8aqv3-TsxDvKH6lwHjIz6tkyAaEP7y_9b-wSxGlr9ZzR7xOYbYU0FNbz2mdgiZHKdWnvVOk5m3gFibkTs_ROwt6XoaQIiTt_erE9SjteKDVoVEe15HInf4E8Ncn58ItzAw9fHjFg"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Dermacare Elite</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Clinical Management</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 bg-surface-container-high text-primary rounded-lg font-semibold transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">group</span>
+                Patients
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Appointments
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                Catalog
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                Analytics
+            </a>
+</nav>
+</aside>
+<div class="flex-grow flex flex-col ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest border-b border-border-subtle shadow-sm docked full-width top-0 sticky z-10">
+<div class="flex justify-between items-center h-16 px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4 focus-within:ring-2 focus-within:ring-primary rounded-lg px-2 py-1 bg-surface">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md text-on-surface w-64" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container rounded-full p-2 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container rounded-full p-2 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="Dr. Smith Profile" class="w-8 h-8 rounded-full border border-border-subtle object-cover" data-alt="A professional headshot of a medical doctor in a bright, modern clinical setting. The doctor has a welcoming yet serious expression. The lighting is soft and bright, emphasizing a clean, premium healthcare environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJaLNsnuL_90gHcweqMjjivez9ESp8VVh4Dh3FCYnzUWsoeCNBZDPlI6aPNwofXhe21-3XFvxmzolPoQKH_vuas9gboqeWm6h04PDSpbqFnXq8ZUCgGuS_X1kqKl6HQ7sapetdVrVvY0Zg0U5CBXUBZUC3JkpDunO8sIqNNxPHqwMMPrwZLEQOLlytB4XQRyYYwsK-R5waWU62iTD02bhlfqD5wcn8jKbkty3FW60hqlQWO5REaaueeg"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow p-gutter md:p-margin-desktop bg-background max-w-container-max mx-auto w-full">
+<!-- Dashboard Header & Controls -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Rendimiento General</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Visión global de indicadores clave de la clínica.</p>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-border-subtle text-on-surface py-2 pl-4 pr-10 rounded-lg focus:outline-none focus:border-status-confirmed focus:ring-1 focus:ring-status-confirmed font-body-md text-body-md cursor-pointer transition-colors shadow-sm">
+<option>Últimos 30 días</option>
+<option>Últimos 6 meses</option>
+<option>Año hasta la fecha</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg font-body-md text-body-md hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Exportar Informe
+                    </button>
+</div>
+</div>
+<!-- KPI Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- KPI 1 -->
+<div class="glass-card flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-secondary-container">person_add</span>
+</div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pacientes Nuevos (Mes)</h3>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">142</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center bg-status-available px-2 py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined text-xs mr-1">trending_up</span> 12%
+                        </span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="glass-card flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">event_available</span>
+</div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tasa de Ocupación</h3>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">87%</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center bg-status-available px-2 py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined text-xs mr-1">trending_up</span> 3%
+                        </span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="glass-card flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">payments</span>
+</div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ingresos Totales</h3>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">$124.5k</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center bg-status-available px-2 py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined text-xs mr-1">trending_up</span> 8%
+                        </span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="glass-card flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">auto_awesome</span>
+</div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tratamiento Principal</h3>
+<div class="flex items-end gap-3">
+<span class="font-headline-md text-headline-md text-primary">Láser Fraccionado</span>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant mt-1">45 citas este mes</p>
+</div>
+</div>
+<!-- Charts Section Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Line Chart (Spans 2 cols on lg) -->
+<div class="glass-card lg:col-span-2">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Evolución de Consultas</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="chart-container">
+<canvas id="consultasChart"></canvas>
+</div>
+</div>
+<!-- Donut Chart -->
+<div class="glass-card">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Demografía</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="chart-container flex items-center justify-center">
+<canvas id="demografiaChart"></canvas>
+</div>
+</div>
+<!-- Bar Chart (Spans full width) -->
+<div class="glass-card lg:col-span-3">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Facturación por Categoría</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="chart-container" style="height: 350px;">
+<canvas id="facturacionChart"></canvas>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Chart.js Initialization -->
+<script>
+        // Design System Colors for Charts
+        const colors = {
+            primary: '#182232',
+            secondary: '#7dfabf',
+            tertiary: '#BEE3F8',
+            outline: '#E2E8F0',
+            textMain: '#1a1c1c',
+            textMuted: '#898989'
+        };
+
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = colors.textMuted;
+        Chart.defaults.scale.grid.color = colors.outline;
+
+        // Line Chart: Evolución de Consultas
+        const ctxConsultas = document.getElementById('consultasChart').getContext('2d');
+        new Chart(ctxConsultas, {
+            type: 'line',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Consultas 2024',
+                    data: [320, 350, 410, 380, 450, 520, 490],
+                    borderColor: colors.primary,
+                    backgroundColor: 'rgba(24, 34, 50, 0.05)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: colors.surfaceContainerLowest,
+                    pointBorderColor: colors.primary,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, border: { display: false } },
+                    x: { border: { display: false }, grid: { display: false } }
+                }
+            }
+        });
+
+        // Donut Chart: Demografía
+        const ctxDemografia = document.getElementById('demografiaChart').getContext('2d');
+        new Chart(ctxDemografia, {
+            type: 'doughnut',
+            data: {
+                labels: ['18-30 años', '31-45 años', '46-60 años', '60+ años'],
+                datasets: [{
+                    data: [15, 45, 30, 10],
+                    backgroundColor: [colors.tertiary, colors.primary, colors.secondary, '#e3e2e1'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { usePointStyle: true, padding: 20, font: { size: 12 } }
+                    }
+                }
+            }
+        });
+
+        // Bar Chart: Facturación
+        const ctxFacturacion = document.getElementById('facturacionChart').getContext('2d');
+        new Chart(ctxFacturacion, {
+            type: 'bar',
+            data: {
+                labels: ['Estética Facial', 'Dermatología Clínica', 'Láser', 'Corporal', 'Capilar'],
+                datasets: [{
+                    label: 'Ingresos ($)',
+                    data: [45000, 28000, 32000, 15000, 9500],
+                    backgroundColor: colors.primary,
+                    borderRadius: 4,
+                    barThickness: 32
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, border: { display: false } },
+                    x: { border: { display: false }, grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body></html>

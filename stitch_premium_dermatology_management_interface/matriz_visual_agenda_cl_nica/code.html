@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="h-full" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Visual Matrix - Dermacare Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeed",
+                        "secondary-container": "#7dfabf",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-secondary-container": "#00734d",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed": "#002113",
+                        "status-reserved": "#FEEBC8",
+                        "surface-tint": "#555f71",
+                        "surface": "#faf9f8",
+                        "inverse-on-surface": "#f1f0f0",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e2e1",
+                        "on-secondary-fixed-variant": "#005235",
+                        "background": "#faf9f8",
+                        "on-surface-variant": "#45474c",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-error-container": "#93000a",
+                        "border-subtle": "#E2E8F0",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "outline": "#75777d",
+                        "secondary": "#006c48",
+                        "on-primary-fixed": "#121c2c",
+                        "secondary-fixed-dim": "#5fdda4",
+                        "tertiary-fixed-dim": "#dbc39f",
+                        "surface-container-low": "#f4f3f2",
+                        "secondary-fixed": "#7dfabf",
+                        "surface-bright": "#faf9f8",
+                        "slate-muted": "#898989",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#554429",
+                        "on-tertiary-container": "#b29c7b",
+                        "status-confirmed": "#BEE3F8",
+                        "inverse-primary": "#bdc7dc",
+                        "primary": "#182232",
+                        "on-tertiary-fixed": "#261903",
+                        "surface-dim": "#dadad9",
+                        "tertiary": "#2c1f07",
+                        "on-primary-fixed-variant": "#3d4759",
+                        "primary-container": "#2d3748",
+                        "primary-fixed-dim": "#bdc7dc",
+                        "tertiary-container": "#43341a",
+                        "status-available": "#C6F6D5",
+                        "primary-fixed": "#d9e3f9",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "outline-variant": "#c5c6cd",
+                        "tertiary-fixed": "#f8dfba",
+                        "on-primary-container": "#96a0b5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-xs": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-xs": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-full flex flex-col md:flex-row antialiased">
+<!-- TopNavBar (Mobile) -->
+<header class="md:hidden sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile h-16 bg-surface border-b border-border-subtle">
+<div class="text-headline-md font-headline-md font-bold text-primary">Dermacare Elite</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 bg-surface-container-low border-r border-border-subtle p-gutter gap-base sticky top-0 shrink-0">
+<div class="flex items-center gap-3 mb-6 px-4">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A minimalist clinical logo design featuring a stylized D, utilizing precise geometric lines and a cool slate blue and silver color palette to convey premium healthcare services. Lighting is flat and digital." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRO7DQQKOMaXCwSx3G2xghRt8uKNETau689fvG0CKL7ptkWG-2IjYaT8L9edmeUgfc3lojRRV2pBy_qgoTB3KH-dN7Eh8hW2FmYjtvCb1UZLkzdpyOmgByJ9w9aQJ2-uuLYTQFO3XhIKcCZh6Xsda3--gDZIc9GP_8vfZNMJtEkz9AV9pyp972kPNCaIn0w_kLbg7zImNaxe0hlS0MBnreBOWpC5hdKi_ed7OWr9F2ih5e6M8QWgor0w">
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Dermacare</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Clinical Portal</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month" data-weight="fill">calendar_month</span>
+<span class="text-label-sm font-label-sm">Agenda</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 rounded-lg scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-label-sm font-label-sm">Patients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 rounded-lg scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</a>
+</nav>
+<button class="mt-auto mb-4 bg-primary text-on-primary py-3 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity">Register Patient</button>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 rounded-lg scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-label-sm font-label-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 rounded-lg scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-label-sm font-label-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col h-full overflow-hidden max-w-container-max mx-auto w-full relative">
+<!-- Canvas Header -->
+<header class="px-margin-desktop py-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-subtle bg-background z-10 sticky top-0">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary">Calendario de Turnos</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Octubre 23 - 29, 2023</p>
+</div>
+<div class="flex items-center gap-3"><button class="flex items-center gap-2 px-4 py-2 bg-surface border border-border-subtle rounded-lg text-label-sm font-label-sm text-on-surface hover:bg-surface-container-highest transition-colors">
+    <span class="material-symbols-outlined text-[18px]">search</span>
+    Consultar Agenda
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface border border-border-subtle rounded-lg text-label-sm font-label-sm text-on-surface hover:bg-surface-container-highest transition-colors">
+    <span class="material-symbols-outlined text-[18px]">block</span>
+    Bloquear Horario
+</button>
+<div class="relative">
+<select class="appearance-none bg-surface border border-border-subtle rounded-lg py-2 pl-4 pr-10 text-body-md font-body-md text-on-surface focus:outline-none focus:border-status-confirmed focus:ring-1 focus:ring-status-confirmed">
+<option>Dr. Alanis (Derm.)</option>
+<option>Dra. Silva (Est.)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface border border-border-subtle rounded-lg py-2 pl-4 pr-10 text-body-md font-body-md text-on-surface focus:outline-none focus:border-status-confirmed focus:ring-1 focus:ring-status-confirmed">
+<option>Todos los trat.</option>
+<option>Laser CO2</option>
+<option>Botox</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:opacity-90 transition-opacity ml-2">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</header>
+<!-- Grid Layout for Calendar and Sidebar -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Calendar Matrix -->
+<div class="flex-1 overflow-auto no-scrollbar bg-surface-bright relative" id="calendar-matrix">
+<!-- Day Headers (Sticky) -->
+<div class="sticky top-0 bg-surface-bright z-20 flex border-b border-border-subtle">
+<div class="w-16 shrink-0 border-r border-border-subtle bg-surface-bright"></div> <!-- Time column spacer -->
+<div class="flex-1 grid grid-cols-5 min-w-[800px]">
+<div class="p-4 text-center border-r border-border-subtle">
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase">Lun</div>
+<div class="text-headline-md font-headline-md text-primary mt-1">23</div>
+</div>
+<div class="p-4 text-center border-r border-border-subtle bg-surface">
+<div class="absolute top-[36px] left-2 right-2 h-24 bg-status-reserved/30 border border-status-reserved rounded-lg p-2 cursor-pointer hover:shadow-md transition-shadow">
+    <div class="flex items-center justify-between mb-1">
+        <span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant">10:30 - 11:30</span>
+        <span class="text-label-xs font-label-xs bg-status-reserved text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-[12px]">payments</span> Señado
+        </span>
+    </div>
+    <div class="text-body-md font-body-md font-medium text-on-surface truncate">M. Gomez</div>
+    <div class="text-label-sm font-label-sm text-on-surface-variant truncate">Laser CO2 - Rostro</div>
+</div>
+<div class="absolute top-[384px] left-2 right-2 h-24 bg-status-confirmed/30 border border-status-confirmed rounded-lg p-2 cursor-pointer shadow-sm hover:shadow-md transition-shadow ring-1 ring-primary/10">
+    <div class="flex items-center justify-between mb-1">
+        <span class="text-label-sm font-label-sm text-on-primary-fixed-variant">13:00 - 14:00</span>
+        <span class="text-label-xs font-label-xs bg-status-confirmed text-on-primary-fixed-variant px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-[12px]">event_available</span> Reservado
+        </span>
+    </div>
+    <div class="text-body-md font-body-md font-medium text-on-surface truncate">R. Blanco</div>
+    <div class="text-label-sm font-label-sm text-on-surface-variant truncate">Consulta Inicial</div>
+</div>
+</div>
+<div class="p-4 text-center border-r border-border-subtle">
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase">Mie</div>
+<div class="text-headline-md font-headline-md text-primary mt-1">25</div>
+</div>
+<div class="p-4 text-center border-r border-border-subtle">
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase">Jue</div>
+<div class="text-headline-md font-headline-md text-primary mt-1">26</div>
+</div>
+<div class="p-4 text-center">
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase">Vie</div>
+<div class="text-headline-md font-headline-md text-primary mt-1">27</div>
+</div>
+</div>
+</div>
+<!-- Calendar Body -->
+<div class="flex relative min-h-[800px]">
+<!-- Time Column -->
+<div class="w-16 shrink-0 border-r border-border-subtle bg-surface-bright flex flex-col">
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">09:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">10:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">11:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">12:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">13:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">14:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">15:00</span>
+</div>
+<div class="h-24 relative border-b border-transparent">
+<span class="absolute top-0 right-2 -mt-2.5 text-label-xs font-label-xs text-on-surface-variant">16:00</span>
+</div>
+</div>
+<!-- Grid Background Lines (Absolute) -->
+<div class="absolute inset-0 left-16 right-0 pointer-events-none">
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+<div class="h-24 border-b border-border-subtle w-full"></div>
+</div>
+<!-- Columns Container -->
+<div class="flex-1 grid grid-cols-5 min-w-[800px] relative z-10">
+<!-- Col 1 (Mon) -->
+<div class="border-r border-border-subtle relative p-2">
+<!-- Slot 1: Available -->
+<div class="absolute top-0 left-2 right-2 h-24 bg-status-available/30 border border-status-available rounded-lg p-2 cursor-pointer hover:shadow-md transition-shadow group">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-secondary-fixed-variant">09:00 - 10:00</span>
+<span class="text-label-xs font-label-xs bg-status-available text-on-secondary-fixed-variant px-2 py-0.5 rounded-pill rounded-full">Disponible</span>
+</div>
+<div class="mt-2 text-body-md font-body-md text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+                                     Click para registrar
+                                 </div>
+</div>
+</div>
+<!-- Col 2 (Tue) -->
+<div class="border-r border-border-subtle relative p-2 bg-surface/50">
+<!-- Slot 2: Señado -->
+<div class="absolute top-[36px] left-2 right-2 h-24 bg-status-reserved/30 border border-status-reserved rounded-lg p-2 cursor-pointer hover:shadow-md transition-shadow">
+    <div class="flex items-center justify-between mb-1">
+        <span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant">10:30 - 11:30</span>
+        <span class="text-label-xs font-label-xs bg-status-reserved text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-[12px]">payments</span> Señado
+        </span>
+    </div>
+    <div class="text-body-md font-body-md font-medium text-on-surface truncate">M. Gomez</div>
+    <div class="text-label-sm font-label-sm text-on-surface-variant truncate">Laser CO2 - Rostro</div>
+</div>
+<!-- Slot 3: Confirmado -->
+<div class="absolute top-[384px] left-2 right-2 h-24 bg-status-confirmed/30 border border-status-confirmed rounded-lg p-2 cursor-pointer shadow-sm hover:shadow-md transition-shadow ring-1 ring-primary/10">
+    <div class="flex items-center justify-between mb-1">
+        <span class="text-label-sm font-label-sm text-on-primary-fixed-variant">13:00 - 14:00</span>
+        <span class="text-label-xs font-label-xs bg-status-confirmed text-on-primary-fixed-variant px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-[12px]">event_available</span> Reservado
+        </span>
+    </div>
+    <div class="text-body-md font-body-md font-medium text-on-surface truncate">R. Blanco</div>
+    <div class="text-label-sm font-label-sm text-on-surface-variant truncate">Consulta Inicial</div>
+</div>
+</div>
+<!-- Col 3 (Wed) -->
+<div class="border-r border-border-subtle relative p-2">
+<!-- Slot 4: Locked (Pending Payment) -->
+<div class="absolute top-[576px] left-2 right-2 h-24 bg-surface-container border border-outline-variant rounded-lg p-2 cursor-not-allowed opacity-80 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,0,0,0.02)_10px,rgba(0,0,0,0.02)_20px)]">
+<div class="flex items-center justify-between mb-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">15:00 - 16:00</span>
+<span class="text-label-xs font-label-xs bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded-pill rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] animate-spin">sync</span> Bloqueado
+                                     </span>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant truncate">En proceso de pago...</div>
+</div>
+</div>
+<!-- Col 4 (Thu) -->
+<div class="border-r border-border-subtle relative p-2"></div>
+<!-- Col 5 (Fri) -->
+<div class="relative p-2"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Sidebar (Right Side) -->
+<aside class="hidden xl:flex flex-col w-80 bg-surface border-l border-border-subtle shadow-[-4px_0_12px_rgba(0,0,0,0.02)] shrink-0 z-30">
+<div class="p-6 h-full flex flex-col items-center justify-center text-center"><div class="w-20 h-20 bg-surface-container-low rounded-full flex items-center justify-center mb-6 text-primary/20">
+    <span class="material-symbols-outlined text-[40px]">calendar_today</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Detalles del Turno</h3>
+<p class="text-body-md font-body-md text-on-surface-variant px-4 leading-relaxed">
+    Seleccione un espacio disponible para agendar un nuevo paciente o haga clic en una reserva para gestionar los detalles.
+</p>
+<div class="mt-8 w-full border-t border-border-subtle pt-8 px-4">
+    <div class="flex items-center gap-3 text-left mb-4">
+        <div class="w-3 h-3 rounded-full bg-status-available"></div>
+        <span class="text-label-sm font-label-sm text-on-surface-variant">Disponible para agendar</span>
+    </div>
+    <div class="flex items-center gap-3 text-left mb-4">
+        <div class="w-3 h-3 rounded-full bg-status-confirmed"></div>
+        <span class="text-label-sm font-label-sm text-on-surface-variant">Turno Reservado</span>
+    </div>
+    <div class="flex items-center gap-3 text-left">
+        <div class="w-3 h-3 rounded-full bg-status-reserved"></div>
+        <span class="text-label-sm font-label-sm text-on-surface-variant">Señado / Depósito</span>
+    </div>
+</div></div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-16 bg-surface rounded-t-xl border-t border-border-subtle shadow-lg">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 tap-highlight-transparent transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month" data-weight="fill">calendar_month</span>
+<span class="text-label-xs font-label-xs">Agenda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high tap-highlight-transparent transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-label-xs font-label-xs">Patients</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high tap-highlight-transparent transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-xs font-label-xs">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple script to auto-scroll calendar to 9am
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendarMatrix = document.getElementById('calendar-matrix');
+            if (calendarMatrix) {
+                // Scroll down slightly to make 9am visible perfectly
+                calendarMatrix.scrollTop = 20; 
+            }
+        });
+    </script>
+
+
+</body></html>

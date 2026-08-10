@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historia Clínica - Dermacare Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#faf9f8",
+                        "tertiary-fixed-dim": "#dbc39f",
+                        "primary": "#182232",
+                        "tertiary-fixed": "#f8dfba",
+                        "surface-variant": "#e3e2e1",
+                        "status-available": "#C6F6D5",
+                        "on-primary-fixed": "#121c2c",
+                        "surface-container-highest": "#e3e2e1",
+                        "secondary-container": "#7dfabf",
+                        "surface": "#faf9f8",
+                        "on-tertiary-fixed-variant": "#554429",
+                        "surface-container-low": "#f4f3f2",
+                        "on-primary-fixed-variant": "#3d4759",
+                        "inverse-surface": "#2f3130",
+                        "outline-variant": "#c5c6cd",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f1f0f0",
+                        "surface-container": "#eeeeed",
+                        "inverse-primary": "#bdc7dc",
+                        "on-secondary-container": "#00734d",
+                        "primary-container": "#2d3748",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#96a0b5",
+                        "surface-dim": "#dadad9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf9f8",
+                        "on-secondary-fixed-variant": "#005235",
+                        "secondary-fixed-dim": "#5fdda4",
+                        "slate-muted": "#898989",
+                        "outline": "#75777d",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d9e3f9",
+                        "status-reserved": "#FEEBC8",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#261903",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bdc7dc",
+                        "status-confirmed": "#BEE3F8",
+                        "on-tertiary-container": "#b29c7b",
+                        "tertiary": "#2c1f07",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#555f71",
+                        "tertiary-container": "#43341a",
+                        "on-surface-variant": "#45474c",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#7dfabf",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "secondary": "#006c48",
+                        "border-subtle": "#E2E8F0",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "container-max": "1280px",
+                        "margin-desktop": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-xs": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-xs": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f8; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar (from JSON) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full flex-col py-6 px-4 border-r border-border-subtle bg-surface-container-lowest dark:bg-surface-container-high w-64 flex-shrink-0 z-40">
+<!-- Header -->
+<div class="flex items-center gap-3 mb-10 px-2">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary font-bold shadow-sm">
+                DC
+            </div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">DermoClinique</h1>
+<p class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Clinical Excellence</p>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm py-3 px-4 rounded-lg mb-8 flex items-center justify-center gap-2 transition-colors duration-200">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Consultation
+        </button>
+<!-- Main Navigation Tabs -->
+<ul class="flex flex-col gap-1 flex-1">
+<!-- Inactive -->
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+</li>
+<!-- Active -->
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-secondary-container text-on-secondary-container font-bold rounded-lg transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined filled text-[20px]" data-icon="group">group</span>
+<span class="font-label-sm text-label-sm">Patients</span>
+</a>
+</li>
+<!-- Inactive -->
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-sm text-label-sm">Appointments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-label-sm text-label-sm">Clinical Records</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-sm text-label-sm">Billing</span>
+</a>
+</li>
+</ul>
+<!-- Footer Navigation Tabs -->
+<ul class="flex flex-col gap-1 mt-auto pt-4 border-t border-border-subtle">
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="logout">logout</span>
+<span class="font-label-sm text-label-sm">Logout</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col md:ml-64 w-full h-full relative">
+<!-- TopAppBar (from JSON) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-16 bg-surface border-b border-border-subtle">
+<!-- Left Side / Search / Breadcrumbs -->
+<div class="flex items-center gap-4 flex-1">
+<button class="md:hidden text-on-surface-variant p-2 hover:bg-surface-container-low rounded-full transition-colors active:opacity-80">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<a class="hover:text-primary transition-colors" href="#">Patients</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-medium">Historia Clínica</span>
+</div>
+</div>
+<!-- Right Side / Actions -->
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors cursor-pointer active:opacity-80" title="notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors cursor-pointer active:opacity-80" title="help">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+</button>
+<div class="h-8 w-px bg-border-subtle mx-2"></div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high border border-border-subtle overflow-hidden hover:opacity-90 transition-opacity ml-1 cursor-pointer active:opacity-80 flex items-center justify-center">
+<img alt="Dr. Profile Picture" class="w-full h-full object-cover" data-alt="A professional headshot of a female dermatologist in a white clinical coat, brightly lit against a neutral grey background, exuding competence and care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_belIvKvMVRF4Q9wxCcPRlnH7Jm6YmV6XzP9ga34fCxt8AxoyJuWZVtZ9Zz21fH2Op9OBJ-4e31qyU9gkdMChVZlufHswO3yNEKXqn4TlgRuUEqbYzxBJ7Kv7a2z70Xxa94DHqBzC92XU2e9zzvbHGmWJtZSTRiQgLWaSq6eq63CwNbYK1mFCHvuvFvbpZRD1YvULw1hJaY3knVb0PCBaNBnx-_rdvZf-x5K_BuZFebPrS4NuslHsw"/>
+</button>
+</div>
+</header>
+<!-- Page Content Canvas -->
+<main class="flex-1 overflow-y-auto p-4 md:p-8 hide-scrollbar bg-background">
+<div class="max-w-[container-max] mx-auto space-y-6">
+<!-- Patient Profile Header -->
+<div class="bg-surface border border-border-subtle rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.02)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-full bg-primary-fixed border-4 border-surface-container-lowest overflow-hidden flex-shrink-0 shadow-sm relative">
+<span class="absolute bottom-1 right-1 w-3.5 h-3.5 bg-secondary rounded-full border-2 border-surface z-10"></span>
+<img alt="Maria Garcia" class="w-full h-full object-cover" data-alt="A portrait of a 34 year old hispanic female patient with clear skin, soft natural lighting, neutral background, looking relaxed and confident." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjtqTL-YRmhTUSzTkfBevKY7b9CwfaFCK0heqxPsx8SuMtfhhV9pWVFZaXRCOfY7O57MekLvLTzJUi-PrjQ5Mnyj0dZQoqkyOCzgtUHqBe755jK9Ii5OMLWkAoH2zE-3rXSbVTbwSVeVlL-frzyFO_FC1W67ZHiBkNrTPaKZEKz-OJbubYgCsRKVVuAXfxRnFdr8PfLpng3zEKnFYWUN4Xf0Ue_1OpJAy1AVJmaC-rSic9Po6BnFAxA"/>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Maria Garcia</h2>
+<span class="bg-status-confirmed text-primary px-2.5 py-0.5 rounded-full font-label-xs text-label-xs border border-blue-200">Consulting Now</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-on-surface-variant font-body-md text-body-md">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">cake</span> 34 años (15/04/1990)</span>
+<span class="text-border-subtle">|</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">badge</span> ID: P-847291</span>
+<span class="text-border-subtle">|</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">history</span> Última visita: 12 Nov, 2023</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-4 py-2 bg-surface hover:bg-surface-container border border-border-subtle rounded-lg text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">print</span> Print
+                        </button>
+<button class="flex-1 md:flex-none px-4 py-2 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-sm text-label-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">save</span> Save Changes
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Layout for Medical Data -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Quick Info & History -->
+<div class="lg:col-span-1 flex flex-col gap-6">
+<!-- Card 1: Datos Filiatorios -->
+<div class="bg-surface border border-border-subtle rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.02)]">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">contact_page</span>
+                                Datos Filiatorios
+                            </h3>
+<div class="space-y-4">
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Teléfono</p>
+<p class="font-body-md text-body-md text-on-background flex items-center gap-2">
+                                        +34 612 345 678
+                                        <button class="text-primary hover:text-primary-container"><span class="material-symbols-outlined text-[16px]">content_copy</span></button>
+</p>
+</div>
+<hr class="border-border-subtle"/>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Email</p>
+<p class="font-body-md text-body-md text-on-background truncate">m.garcia.90@email.com</p>
+</div>
+<hr class="border-border-subtle"/>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Dirección</p>
+<p class="font-body-md text-body-md text-on-background">Av. Diagonal 453, 3º 2ª<br/>08036, Barcelona, España</p>
+</div>
+<hr class="border-border-subtle"/>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle">
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">emergency</span> Contacto de Emergencia
+                                    </p>
+<p class="font-body-md text-body-md text-on-background font-medium">Carlos Ruiz (Esposo)</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">+34 689 123 456</p>
+</div>
+</div>
+</div>
+<!-- Card 2: Antecedentes Médicos -->
+<div class="bg-surface border border-border-subtle rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.02)]">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">medical_information</span>
+                                Antecedentes Médicos
+                            </h3>
+<div class="space-y-5">
+<!-- Allergies (Highlighted soft red) -->
+<div class="bg-error-container/30 border border-error-container rounded-lg p-3">
+<p class="font-label-xs text-label-xs text-error uppercase mb-1.5 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Alergias
+                                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-error-container text-on-error-container px-2 py-1 rounded-md font-label-sm text-label-sm">Penicilina</span>
+<span class="bg-error-container text-on-error-container px-2 py-1 rounded-md font-label-sm text-label-sm">Látex (Leve)</span>
+</div>
+</div>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-2">Condiciones Crónicas</p>
+<ul class="list-disc list-inside font-body-md text-body-md text-on-background space-y-1">
+<li>Hipotiroidismo (Controlado)</li>
+<li>Rosácea (Fase I)</li>
+</ul>
+</div>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-2">Medicación Actual</p>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-sm border-b border-border-subtle pb-1">
+<span class="font-medium text-on-background">Levotiroxina 50mcg</span>
+<span class="text-on-surface-variant text-xs">1/día (Mañana)</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-border-subtle pb-1">
+<span class="font-medium text-on-background">Metronidazol Gel 0.75%</span>
+<span class="text-on-surface-variant text-xs">Uso Tópico (Noche)</span>
+</div>
+</div>
+</div>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-2">Cirugías Previas</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Ninguna reportada</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Exam & Plan -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Card 3: Evaluación y Examen Físico -->
+<div class="bg-surface border border-border-subtle rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.02)] flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">stethoscope</span>
+                                Evaluación y Examen Físico
+                            </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle">
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Presión Arterial</p>
+<p class="font-headline-md text-headline-md text-on-background">120/80</p>
+<p class="text-xs text-secondary font-medium flex items-center mt-1"><span class="material-symbols-outlined text-[14px]">check_circle</span> Normal</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle">
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Fototipo Piel</p>
+<p class="font-headline-md text-headline-md text-on-background">III</p>
+<p class="text-xs text-on-surface-variant mt-1">Fitzpatrick</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle">
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Peso</p>
+<p class="font-headline-md text-headline-md text-on-background">64 <span class="text-sm font-normal text-on-surface-variant">kg</span></p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle">
+<p class="font-label-xs text-label-xs text-slate-muted uppercase mb-1">Estado General</p>
+<p class="font-headline-md text-[18px] text-secondary mt-1 flex items-center gap-1">
+                                        Estable
+                                    </p>
+</div>
+</div>
+<div class="mb-5">
+<label class="block font-label-sm text-label-sm text-primary mb-2">Motivo de Consulta (Main Concern)</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-2.5 text-on-background font-body-md text-body-md focus:outline-none focus:border-status-confirmed focus:ring-1 focus:ring-status-confirmed transition-colors" readonly="" type="text" value="Brote agudo de rosácea en mejillas y mentón, acompañado de sensación de ardor."/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-2">Notas Clínicas del Examen</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-on-background font-body-md text-body-md focus:outline-none focus:border-status-confirmed focus:ring-1 focus:ring-status-confirmed transition-colors resize-none" rows="6">Paciente presenta eritema centrofacial persistente con presencia de telangiectasias finas en alas nasales y región malar bilateral. Se observan escasas pápulas eritematosas, sin pústulas evidentes en este momento. Refiere empeoramiento con cambios de temperatura y estrés. No se observan signos de afectación ocular. Resto del examen cutáneo sin particularidades. Piel con fotodaño leve (Glogau I-II).</textarea>
+</div>
+</div>
+<!-- Card 4: Plan de Tratamiento -->
+<div class="bg-surface border border-border-subtle rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.02)]">
+<h3 class="font-headline-md text-headline-md text-primary mb-5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">prescriptions</span>
+                                Plan de Tratamiento
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Procedures -->
+<div>
+<p class="font-label-sm text-label-sm text-primary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">vaccines</span> Procedimientos Recomendados
+                                    </p>
+<div class="space-y-3">
+<label class="flex items-start gap-3 p-3 border border-border-subtle rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 text-primary bg-surface border-outline-variant rounded focus:ring-primary" type="checkbox"/>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-background">Terapia Láser Vascular (IPL)</p>
+<p class="text-xs text-on-surface-variant mt-0.5">Para reducción de telangiectasias y eritema basal.</p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 border border-border-subtle rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 text-primary bg-surface border-outline-variant rounded focus:ring-primary" type="checkbox"/>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-background">Peeling Suave para Rosácea</p>
+<p class="text-xs text-on-surface-variant mt-0.5">Ácido azelaico 15% (Opcional, según evolución).</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Prescription & Next Steps -->
+<div class="flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-primary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">medication</span> Receta (Nueva)
+                                        </p>
+<div class="bg-surface-container-lowest border border-border-subtle rounded-lg p-3">
+<ul class="list-disc list-inside font-body-md text-body-md text-on-background text-sm space-y-2">
+<li><strong>Ivermectina crema 1%:</strong> Aplicar una cantidad tamaño guisante por la noche.</li>
+<li><strong>Protector Solar Mineral SPF 50+:</strong> Aplicar c/4 hrs estricto.</li>
+<li>Suspender temporalmente Metronidazol Gel.</li>
+</ul>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between p-3 bg-status-confirmed/30 border border-status-confirmed rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface rounded-full flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<p class="font-label-xs text-label-xs text-slate-muted uppercase">Próxima Sesión</p>
+<p class="font-body-md text-body-md font-medium text-primary">En 4 semanas (Control IPL)</p>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-medium underline">Agendar</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

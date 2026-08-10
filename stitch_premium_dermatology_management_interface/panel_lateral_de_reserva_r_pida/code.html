@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reserva Rápida de Turno</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for panel */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E2E8F0;
+            border-radius: 9999px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#dbc39f",
+                      "border-subtle": "#E2E8F0",
+                      "primary-fixed": "#d9e3f9",
+                      "surface-container-highest": "#e3e2e1",
+                      "surface-dim": "#dadad9",
+                      "secondary": "#006c48",
+                      "slate-muted": "#898989",
+                      "on-tertiary-container": "#b29c7b",
+                      "background": "#faf9f8",
+                      "surface": "#faf9f8",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2f3130",
+                      "on-surface": "#1a1c1c",
+                      "status-confirmed": "#BEE3F8",
+                      "outline": "#75777d",
+                      "on-error-container": "#93000a",
+                      "on-primary-container": "#96a0b5",
+                      "inverse-primary": "#bdc7dc",
+                      "surface-container-low": "#f4f3f2",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e3e2e1",
+                      "on-primary-fixed-variant": "#3d4759",
+                      "surface-container": "#eeeeed",
+                      "outline-variant": "#c5c6cd",
+                      "on-background": "#1a1c1c",
+                      "surface-container-high": "#e9e8e7",
+                      "on-secondary-fixed": "#002113",
+                      "secondary-container": "#7dfabf",
+                      "primary-container": "#2d3748",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#00734d",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#f1f0f0",
+                      "secondary-fixed-dim": "#5fdda4",
+                      "tertiary": "#2c1f07",
+                      "on-secondary-fixed-variant": "#005235",
+                      "secondary-fixed": "#7dfabf",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#43341a",
+                      "surface-tint": "#555f71",
+                      "status-reserved": "#FEEBC8",
+                      "on-primary-fixed": "#121c2c",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#45474c",
+                      "primary": "#182232",
+                      "status-available": "#C6F6D5",
+                      "surface-bright": "#faf9f8",
+                      "on-tertiary-fixed": "#261903",
+                      "tertiary-fixed": "#f8dfba",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#bdc7dc",
+                      "on-tertiary-fixed-variant": "#554429"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "container-max": "1280px",
+                      "margin-desktop": "32px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-xs": ["Inter"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-xs": ["11px", {"lineHeight": "14px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background min-h-screen overflow-hidden font-body-md text-body-md text-on-surface antialiased relative">
+<!-- Mock Background: Clinical Agenda -->
+<div class="absolute inset-0 p-8 grid grid-cols-6 gap-4 opacity-50 select-none">
+<div class="col-span-1 border-r border-border-subtle pr-4 text-right space-y-12 pt-12 text-outline">
+<div>08:00</div>
+<div>09:00</div>
+<div>10:00</div>
+<div>11:00</div>
+<div>12:00</div>
+</div>
+<div class="col-span-5 space-y-4">
+<div class="flex gap-4 mb-4 border-b border-border-subtle pb-4">
+<div class="flex-1 font-headline-md text-headline-md">Lunes 14</div>
+<div class="flex-1 font-headline-md text-headline-md">Martes 15</div>
+<div class="flex-1 font-headline-md text-headline-md">Miércoles 16</div>
+</div>
+<!-- Mock Appointments -->
+<div class="relative h-full border-t border-border-subtle pt-8">
+<div class="absolute top-10 left-0 w-64 p-4 bg-status-confirmed rounded-lg border border-primary-fixed-dim">Consulta General</div>
+<div class="absolute top-48 left-72 w-64 p-4 bg-status-available rounded-lg border border-secondary-fixed-dim">Tratamiento</div>
+</div>
+</div>
+</div>
+<!-- Backdrop Overlay -->
+<div class="fixed inset-0 bg-inverse-surface/30 backdrop-blur-sm z-40 transition-opacity duration-300"></div>
+<!-- Slide-over Panel -->
+<aside class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-container-lowest shadow-2xl flex flex-col border-l border-border-subtle transform transition-transform duration-300 ease-in-out translate-x-0">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-5 border-b border-border-subtle shrink-0 bg-surface-container-lowest">
+<h2 class="font-headline-md text-headline-md text-primary">Reserva Rápida de Turno</h2>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-6 py-6 space-y-8 custom-scrollbar">
+<!-- Section I: Patient Data -->
+<section class="space-y-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">I. Datos del Paciente</h3>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-3 py-2.5 bg-surface-container-lowest border border-border-subtle rounded-DEFAULT focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-body-md text-on-surface placeholder:text-outline" placeholder="Buscar paciente existente..." type="text"/>
+</div>
+<div class="flex items-center gap-4 py-2">
+<hr class="flex-1 border-border-subtle"/>
+<span class="font-label-xs text-label-xs text-outline uppercase">o Registro Rápido</span>
+<hr class="flex-1 border-border-subtle"/>
+</div>
+<div class="space-y-3">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Nombre Completo</label>
+<input class="w-full px-3 py-2.5 bg-surface-container-lowest border border-border-subtle rounded-DEFAULT focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-body-md text-on-surface" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Teléfono</label>
+<input class="w-full px-3 py-2.5 bg-surface-container-lowest border border-border-subtle rounded-DEFAULT focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-body-md text-on-surface" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Section II: Appointment Details -->
+<section class="space-y-4 pt-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">II. Detalles del Turno</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 border border-border-subtle rounded-DEFAULT bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+<div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Fecha</div>
+<div class="font-body-md text-body-md text-on-surface font-medium">14 Nov 2023</div>
+</div>
+</div>
+<div class="p-3 border border-border-subtle rounded-DEFAULT bg-status-confirmed flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<div class="font-label-xs text-label-xs text-primary-container">Horario</div>
+<div class="font-body-md text-body-md text-primary font-medium">10:30 AM</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Servicio</label>
+<div class="relative">
+<select class="w-full pl-3 pr-10 py-2.5 bg-surface-container-lowest border border-border-subtle rounded-DEFAULT focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md text-body-md text-on-surface appearance-none">
+<option disabled="" selected="" value="">Seleccionar especialidad...</option>
+<option value="dermatologia">Dermatología Clínica</option>
+<option value="estetica">Medicina Estética</option>
+<option value="laser">Depilación Láser</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Section III: Payment & Deposit -->
+<section class="space-y-4 pt-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">III. Pago y Seña</h3>
+<div class="border border-border-subtle rounded-DEFAULT bg-surface overflow-hidden">
+<div class="p-4 space-y-3">
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface">
+<span>Costo del Servicio (Est.)</span>
+<span>$45.000</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Descuento Prepaga</span>
+<span>-$0</span>
+</div>
+<hr class="border-border-subtle"/>
+<div class="flex justify-between items-center font-headline-md text-headline-md text-primary pt-1">
+<span>Seña Obligatoria</span>
+<span>$10.000</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 border-t border-border-subtle">
+<button class="w-full bg-secondary hover:bg-on-secondary-container text-on-secondary py-3 px-4 rounded-DEFAULT font-label-sm text-label-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined" data-icon="payments" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+                            Pagar Seña con Mercado Pago
+                        </button>
+<p class="text-center mt-3 font-label-xs text-label-xs text-outline">
+                            El turno quedará reservado tras confirmar el pago de la seña.
+                        </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Actions -->
+<footer class="p-6 border-t border-border-subtle bg-surface-container-lowest shrink-0 flex gap-4">
+<button class="flex-1 py-3 px-4 border border-border-subtle text-on-surface hover:bg-surface-container-low rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                Cancelar
+            </button>
+<button class="flex-1 py-3 px-4 bg-primary text-on-primary hover:bg-primary-container rounded-DEFAULT font-label-sm text-label-sm transition-colors shadow-sm flex items-center justify-center gap-2 opacity-70 cursor-not-allowed">
+                Confirmar Reserva
+            </button>
+</footer>
+</aside>
+</body></html>
