@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stryker-mutator/stryker-js/master/packages/core/schema/stryker-schema.json",
+  "testRunner": "vitest",
+  "reporters": [
+    "html",
+    "clear-text",
+    "json",
+    "progress"
+  ],
+  "mutate": [
+    "src/components/Layout.jsx",
+    "src/App.jsx",
+    "src/pages/InicioSesion.jsx",
+    "src/pages/RecuperacionContrasena.jsx",
+    "src/pages/RegistroPaciente.jsx",
+    "src/pages/PerfilPaciente.jsx",
+    "src/pages/DirectorioPacientes.jsx",
+    "src/pages/MatrizVisualAgenda.jsx",
+    "src/pages/EdicionTurno.jsx"
+  ],
+  "coverageAnalysis": "perTest",
+  "vitest": {
+    "configFile": "vite.config.js"
+  },
+  "tempDirName": ".stryker-tmp",
+  "cleanTempDir": true,
+  "concurrency": 2,
+  "timeoutMS": 15000,
+  "timeoutFactor": 1.5,
+  "thresholds": {
+    "high": 80,
+    "low": 70,
+    "break": 70
+  }
+}
