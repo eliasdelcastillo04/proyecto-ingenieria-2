@@ -1,0 +1,518 @@
+{
+  "backend/mvnw": {
+    "mtime": 1786397528.0,
+    "seen": 1790097707.296722,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": ""
+  },
+  "backend/pom.xml": {
+    "mtime": 1786402772.619883,
+    "seen": 1790097707.2967281,
+    "ast_hash": "3bd8d2f39d557b764062d0efc438cef8",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/BackendApplication.java": {
+    "mtime": 1786397528.0,
+    "seen": 1790097707.296731,
+    "ast_hash": "ea5b2a8b2a6189e01f6069ee88bdc5d4",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java": {
+    "mtime": 1790096548.8279576,
+    "seen": 1790097707.296732,
+    "ast_hash": "bbc275e058baea1bc7b97657b15cb2d7",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/controllers/AuthController.java": {
+    "mtime": 1786397812.57569,
+    "seen": 1790097707.296733,
+    "ast_hash": "69a1741a0f2aa6a9001215079d0e108b",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/controllers/GlobalExceptionHandler.java": {
+    "mtime": 1790094118.6975543,
+    "seen": 1790097707.2967339,
+    "ast_hash": "84bcaaf903ae2cd94f4faf00a5b7dbc3",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/controllers/PatientController.java": {
+    "mtime": 1790094144.1960647,
+    "seen": 1790097707.296735,
+    "ast_hash": "1a9e73348b2f560cdb0a38064b92c617",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java": {
+    "mtime": 1790096500.9152296,
+    "seen": 1790097707.296736,
+    "ast_hash": "3117b60fc075e30eacca705907244ec3",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/dtos/PaymentPreferenceResponse.java": {
+    "mtime": 1790096432.0350976,
+    "seen": 1790097707.296737,
+    "ast_hash": "217ab414ff006e5d4c752a87f85c7468",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/Appointment.java": {
+    "mtime": 1786399748.44416,
+    "seen": 1790097707.2967381,
+    "ast_hash": "574bf59b38ae60e0c304a12c473e7a5c",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/AppointmentStatus.java": {
+    "mtime": 1786397655.5463183,
+    "seen": 1790097707.296739,
+    "ast_hash": "fc266de6e86965cbc652a008f5713d40",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/Consultation.java": {
+    "mtime": 1786397712.3573866,
+    "seen": 1790097707.29674,
+    "ast_hash": "b7692b436ab6e44e68592f1d1e0f0de7",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/Patient.java": {
+    "mtime": 1786397639.0894084,
+    "seen": 1790097707.296741,
+    "ast_hash": "c09a9c4ad34ac4918d85a44684669317",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/Profile.java": {
+    "mtime": 1786397665.826056,
+    "seen": 1790097707.296742,
+    "ast_hash": "00a3fdaba0f30fda40edf699b40fbca9",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java": {
+    "mtime": 1786397676.7020824,
+    "seen": 1790097707.296743,
+    "ast_hash": "6b282dab229ae1d6cb06e3992fec2c74",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/entities/UserRole.java": {
+    "mtime": 1786397647.4344475,
+    "seen": 1790097707.2967439,
+    "ast_hash": "129d574224a07ce8004224125f390d12",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/repositories/AppointmentRepository.java": {
+    "mtime": 1786397783.2983932,
+    "seen": 1790097707.296745,
+    "ast_hash": "28d88a53f2cefd2fbc170ef3dcb65bbf",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/repositories/PatientRepository.java": {
+    "mtime": 1790094083.0912418,
+    "seen": 1790097707.296746,
+    "ast_hash": "a550e32bd0cf2bd693d29528ae139d00",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/security/JwtAuthenticationFilter.java": {
+    "mtime": 1786397746.3261616,
+    "seen": 1790097707.296747,
+    "ast_hash": "46539fa8681e30656402b613c6d26ebd",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/security/JwtService.java": {
+    "mtime": 1786397735.02013,
+    "seen": 1790097707.296748,
+    "ast_hash": "f6b5d5a536b0a99065d0279e33963be4",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/security/SecurityConfig.java": {
+    "mtime": 1786397757.2135293,
+    "seen": 1790097707.296748,
+    "ast_hash": "3fc472ee998cf99f9206359104849232",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java": {
+    "mtime": 1790096488.5094762,
+    "seen": 1790097707.296749,
+    "ast_hash": "74b7952117a26931e8b0741c296a4961",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/services/MercadoPagoService.java": {
+    "mtime": 1790096443.1994898,
+    "seen": 1790097707.296751,
+    "ast_hash": "ec6623c6e9d64e8fcc46d8952405ffa0",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/dermacare/backend/services/PatientService.java": {
+    "mtime": 1790094099.26236,
+    "seen": 1790097707.296751,
+    "ast_hash": "20d258bc32502d4dfa094c888873f7cb",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/BackendApplicationTests.java": {
+    "mtime": 1786397528.0,
+    "seen": 1790097707.2967522,
+    "ast_hash": "7352047144fc84a7095d1d83f32700a9",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/controllers/AppointmentControllerTest.java": {
+    "mtime": 1790094240.3657894,
+    "seen": 1790097707.296753,
+    "ast_hash": "454faa88bd0b486daa6fa567f79035b9",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/controllers/AuthControllerTest.java": {
+    "mtime": 1786402523.656661,
+    "seen": 1790097707.296754,
+    "ast_hash": "bbdf75391b4205dff546d72b8bc8bd9d",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/controllers/PatientControllerTest.java": {
+    "mtime": 1790094221.7118325,
+    "seen": 1790097707.2967548,
+    "ast_hash": "7096559f2013a352b2abe3a048fd14d3",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/security/JwtAuthenticationFilterTest.java": {
+    "mtime": 1786402260.7609935,
+    "seen": 1790097707.296756,
+    "ast_hash": "eb6b709b4134c615651252d43e988dfd",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java": {
+    "mtime": 1786402257.4959812,
+    "seen": 1790097707.296757,
+    "ast_hash": "5b6a4f363089e78a367e0ca400cb9316",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/services/AppointmentPaymentTest.java": {
+    "mtime": 1790096559.6781847,
+    "seen": 1790097707.296758,
+    "ast_hash": "a0db7252c8968baafeb9d57a0d7274b7",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/services/AppointmentServiceTest.java": {
+    "mtime": 1790094194.501066,
+    "seen": 1790097707.2967591,
+    "ast_hash": "db014645e855dc4ef7823c9b1b303cde",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java": {
+    "mtime": 1790094182.955205,
+    "seen": 1790097707.2967591,
+    "ast_hash": "1e867fc39e9bfbcce8844ab48e99ffa5",
+    "semantic_hash": ""
+  },
+  "flujo_pago_mercadopago.sequence.json": {
+    "mtime": 1790092481.9550335,
+    "seen": 1790097707.29676,
+    "ast_hash": "d26c67e882915142aa5516a3185a23fb",
+    "semantic_hash": ""
+  },
+  "frontend/package.json": {
+    "mtime": 1790096616.8173034,
+    "seen": 1790097707.2967622,
+    "ast_hash": "10f8b75fc6ef6166b725518184f97215",
+    "semantic_hash": ""
+  },
+  "frontend/postcss.config.js": {
+    "mtime": 1786395648.972706,
+    "seen": 1790097707.296763,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": ""
+  },
+  "frontend/src/App.jsx": {
+    "mtime": 1786395713.5785444,
+    "seen": 1790097707.296764,
+    "ast_hash": "efc5184a2912a79328f1ad60caf341ee",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/App.test.jsx": {
+    "mtime": 1786401798.3909419,
+    "seen": 1790097707.2967649,
+    "ast_hash": "c540e0ef0750f4232f582905f613a167",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/DirectorioPacientes.test.jsx": {
+    "mtime": 1786401813.9156985,
+    "seen": 1790097707.2967649,
+    "ast_hash": "9008aae1a1e34651ae7682057c94c8de",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/EdicionTurno.test.jsx": {
+    "mtime": 1786401820.4480677,
+    "seen": 1790097707.296767,
+    "ast_hash": "cf6efdb28a5e72e749ec5f1b938f22f0",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/InicioSesion.test.jsx": {
+    "mtime": 1786401801.4605722,
+    "seen": 1790097707.296767,
+    "ast_hash": "228d721b396ea91287dc3d83de120dc3",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/Layout.test.jsx": {
+    "mtime": 1786401795.645906,
+    "seen": 1790097707.296768,
+    "ast_hash": "57bf84fe0710ede8770ba5e13488b007",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/MatrizVisualAgenda.test.jsx": {
+    "mtime": 1786401817.1973631,
+    "seen": 1790097707.29677,
+    "ast_hash": "eb1bb5803a8f351cfa1c57537ff65a65",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/PaymentModal.test.jsx": {
+    "mtime": 1790096730.7020783,
+    "seen": 1790097707.29677,
+    "ast_hash": "c2c205f0741487a3ae76863df654dbe4",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/PerfilPaciente.test.jsx": {
+    "mtime": 1786401810.7694275,
+    "seen": 1790097707.296771,
+    "ast_hash": "0bbfc324de111f1e3207a1f8ff9436c8",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/RecuperacionContrasena.test.jsx": {
+    "mtime": 1786401804.1588168,
+    "seen": 1790097707.296772,
+    "ast_hash": "f46ce1dd0175b3701a877d1840bb3687",
+    "semantic_hash": ""
+  },
+  "frontend/src/__tests__/RegistroPaciente.test.jsx": {
+    "mtime": 1786401807.5127165,
+    "seen": 1790097707.2967732,
+    "ast_hash": "d71f402f1d692fcced0a36a91c124a48",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/Layout.jsx": {
+    "mtime": 1786395692.6123004,
+    "seen": 1790097707.296774,
+    "ast_hash": "37db987954b30314f0d814d3fcd44b60",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/PaymentModal.jsx": {
+    "mtime": 1790096640.3385768,
+    "seen": 1790097707.2967749,
+    "ast_hash": "fd39a627041aa9f09ea0bb1b8f531afe",
+    "semantic_hash": ""
+  },
+  "frontend/src/main.jsx": {
+    "mtime": 1786393595.1285717,
+    "seen": 1790097707.2967758,
+    "ast_hash": "54a301507dcdfccf4e5565754374b5dc",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/CatalogoServicios.jsx": {
+    "mtime": 1786396594.8249204,
+    "seen": 1790097707.296777,
+    "ast_hash": "0585a2ff39688751b7380d2835101488",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/ClinicalClarity.jsx": {
+    "mtime": 1786395701.5937185,
+    "seen": 1790097707.296778,
+    "ast_hash": "df8a5807df710de60c6ff8fa3385d9dd",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/ConfiguracionCatalogo.jsx": {
+    "mtime": 1786396594.8298452,
+    "seen": 1790097707.296779,
+    "ast_hash": "09481165b3174d0453dd8a7cbcd68801",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/DashboardDermacare.jsx": {
+    "mtime": 1786396594.8315887,
+    "seen": 1790097707.296779,
+    "ast_hash": "9672e90b0be139e49c47f910f5edaae6",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/DashboardNegocio.jsx": {
+    "mtime": 1786396594.8307426,
+    "seen": 1790097707.29678,
+    "ast_hash": "514882b1fd9727d1693091f440541523",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/DirectorioPacientes.jsx": {
+    "mtime": 1786396725.0459843,
+    "seen": 1790097707.296781,
+    "ast_hash": "66dc59e18f122a19c0263598d8bcf867",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/EdicionTurno.jsx": {
+    "mtime": 1786396746.7494783,
+    "seen": 1790097707.296782,
+    "ast_hash": "da874c97c5ce7eee1e3a1124b52eef04",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/FormularioEvolucion.jsx": {
+    "mtime": 1786396594.8330514,
+    "seen": 1790097707.2967832,
+    "ast_hash": "3ecc518412bf07510eb52bf5520dc4d7",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/GestionCobranzas.jsx": {
+    "mtime": 1786396594.8335772,
+    "seen": 1790097707.296784,
+    "ast_hash": "ad7052e82edb61677c7c4c8b4ce2e066",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/HistoriaClinicaCompleta.jsx": {
+    "mtime": 1786396594.8346133,
+    "seen": 1790097707.2967849,
+    "ast_hash": "51f7b2c23bf1c15ad892141fccb4daf7",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/HistoriaClinicaPanel.jsx": {
+    "mtime": 1786396594.836354,
+    "seen": 1790097707.2967849,
+    "ast_hash": "4225e03bb97fe81edcbf45cc9a4abfe6",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/HistoriaClinicaRegistro.jsx": {
+    "mtime": 1786396594.8379118,
+    "seen": 1790097707.2967858,
+    "ast_hash": "d12b87ba299bbab5070308a23b93e386",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/HistoriaClinicaTabulada.jsx": {
+    "mtime": 1786396594.8388553,
+    "seen": 1790097707.296787,
+    "ast_hash": "d71256446f3488da5bef54464e897722",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/InicioSesion.jsx": {
+    "mtime": 1786397048.2484953,
+    "seen": 1790097707.296788,
+    "ast_hash": "5d6ebe26d2d2ab1d45a34e89db2c357c",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/MatrizVisualAgenda.jsx": {
+    "mtime": 1786396905.6745477,
+    "seen": 1790097707.296789,
+    "ast_hash": "f9080b04cd8a7c921cd01202f2d300e1",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/PanelLateralReserva.jsx": {
+    "mtime": 1786396594.8404396,
+    "seen": 1790097707.2967901,
+    "ast_hash": "47094530a1084720e0e3fba8ffbf580c",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/PanelRegistroPago.jsx": {
+    "mtime": 1790096694.616977,
+    "seen": 1790097707.296791,
+    "ast_hash": "10fa0957dd1083a00207d7d5bbda6daa",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/PerfilPaciente.jsx": {
+    "mtime": 1786396594.841055,
+    "seen": 1790097707.296791,
+    "ast_hash": "b41e4fd08d0fbdb52fff2e3f2f34d37e",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/RecuperacionContrasena.jsx": {
+    "mtime": 1786397172.363625,
+    "seen": 1790097707.296793,
+    "ast_hash": "93743028ad50cf354f7efa17d3188be4",
+    "semantic_hash": ""
+  },
+  "frontend/src/pages/RegistroPaciente.jsx": {
+    "mtime": 1786396594.8429575,
+    "seen": 1790097707.296793,
+    "ast_hash": "451cd96dcaf45027047eb17c7e922655",
+    "semantic_hash": ""
+  },
+  "frontend/src/setupTests.js": {
+    "mtime": 1786401778.286787,
+    "seen": 1790097707.296795,
+    "ast_hash": "4b03a74741f7e19bb3d90a075c07a661",
+    "semantic_hash": ""
+  },
+  "frontend/stryker.config.json": {
+    "mtime": 1786401780.4064364,
+    "seen": 1790097707.296795,
+    "ast_hash": "5befc2802252e4e0a6cb09ace07b387d",
+    "semantic_hash": ""
+  },
+  "frontend/tailwind.config.js": {
+    "mtime": 1786395641.4653537,
+    "seen": 1790097707.2967958,
+    "ast_hash": "464689484aabdea5d23821d1fa3e45f3",
+    "semantic_hash": ""
+  },
+  "frontend/vercel.json": {
+    "mtime": 1786396437.040074,
+    "seen": 1790097707.296797,
+    "ast_hash": "61bd31a2b0ac08f10f13c932b32d6ca1",
+    "semantic_hash": ""
+  },
+  "frontend/vite.config.js": {
+    "mtime": 1786401775.7184885,
+    "seen": 1790097707.296798,
+    "ast_hash": "5a3d77764f4051cab169f6f4af24563f",
+    "semantic_hash": ""
+  },
+  "PROJECT.md": {
+    "mtime": 1786401640.330909,
+    "seen": 1790097707.296799,
+    "ast_hash": "28e31578439185178920e305783708ec",
+    "semantic_hash": ""
+  },
+  "RPD.md": {
+    "mtime": 1790094344.8366272,
+    "seen": 1790097707.2968,
+    "ast_hash": "6b341855d1e29a076d675aaf3bdfe79a",
+    "semantic_hash": ""
+  },
+  "backend/src/main/resources/application.yml": {
+    "mtime": 1786399881.275719,
+    "seen": 1790097707.296801,
+    "ast_hash": "81a738d885193e8599da8c9fe88751f8",
+    "semantic_hash": ""
+  },
+  "backend/src/test/resources/application.yml": {
+    "mtime": 1786402569.4256992,
+    "seen": 1790097707.296802,
+    "ast_hash": "d685107494ffa554aebc73f32d9c2d75",
+    "semantic_hash": ""
+  },
+  "flujo_pago_mercadopago.html": {
+    "mtime": 1790092477.8152313,
+    "seen": 1790097707.296803,
+    "ast_hash": "8a6fc0370618d4723830c22fa886f4dd",
+    "semantic_hash": ""
+  },
+  "frontend/index.html": {
+    "mtime": 1786395735.201077,
+    "seen": 1790097707.2968051,
+    "ast_hash": "bc4555492ce7f8f2185d60c496b3d435",
+    "semantic_hash": ""
+  },
+  "modelo_clases.md": {
+    "mtime": 1790094327.5969045,
+    "seen": 1790097707.2968059,
+    "ast_hash": "7e029b0e975fefe03a6ecca30e49eee1",
+    "semantic_hash": ""
+  },
+  "Copia de Copia de Copia de HISTORIA CL\u00cdNICA MODELO.pdf": {
+    "mtime": 1786392609.164976,
+    "seen": 1790097707.296818,
+    "ast_hash": "2fc1ef67653153cf0d29d229fab893c1",
+    "semantic_hash": ""
+  },
+  "Proyecto Integrador 2026.pdf": {
+    "mtime": 1786054185.274109,
+    "seen": 1790097707.296819,
+    "ast_hash": "2beec9d2de13f28f448d7a0698289413",
+    "semantic_hash": ""
+  },
+  "CasosDeUso.drawio.png": {
+    "mtime": 1786396526.9484255,
+    "seen": 1790097707.2968209,
+    "ast_hash": "57f397bcff93f0b84cc341c43db6ddea",
+    "semantic_hash": ""
+  },
+  "modelo_clases.jpg": {
+    "mtime": 1786403957.4833915,
+    "seen": 1790097707.2968261,
+    "ast_hash": "477e5a96579118b4837fea4ab002206a",
+    "semantic_hash": ""
+  }
+}

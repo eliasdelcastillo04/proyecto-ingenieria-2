@@ -1,0 +1,22 @@
+{
+  "0": "Patient",
+  "1": "org.junit.jupiter.api.Test",
+  "2": "App.jsx",
+  "3": "JwtService",
+  "4": "package.json",
+  "5": "PaymentPreferenceResponse",
+  "6": "PatientControllerTest",
+  "7": "Consultation",
+  "8": "org.springframework.http.ResponseEntity",
+  "9": "RPD-001: Adopción e Implementación de Arquitectura en Capas, Patrón Repository con Spring Data JPA y Gestión de Ciclo de Vida Singleton en DermaCare Backend",
+  "10": "ServiceEntity",
+  "11": "stryker.config.json",
+  "12": "mvnw",
+  "13": "Project: Testing Suite Implementation — Sistema de Gestión Dermatológica",
+  "14": "Modelo de Clases — DermaCare Backend",
+  "15": "BackendApplication",
+  "16": "tailwind.config.js",
+  "17": "vercel.json",
+  "18": "postcss.config.js",
+  "19": "com.dermacare:backend"
+}

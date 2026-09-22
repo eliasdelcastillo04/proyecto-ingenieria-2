@@ -1,0 +1,17 @@
+---
+source_file: "RPD.md"
+type: "document"
+community: "RPD-001: Adopción e Implementación de Arquitectura en Capas, Patrón Repository con Spring Data JPA y Gestión de Ciclo de Vida Singleton en DermaCare Backend"
+location: "L1"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/RPD-001_Adopción_e_Implementación_de_Arquitectura_en_Capas_Patrón_Repository_con_Spring_Data_JPA_y_Gestión_de_Ciclo_de_Vida_Singleton_en_DermaCare_Backend
+---
+
+# RPD.md
+
+## Connections
+- [[RPD-001 Adopción e Implementación de Arquitectura en Capas, Patrón Repository con Spring Data JPA y Gestión de Ciclo de Vida Singleton en DermaCare Backend]] - `contains` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/RPD-001_Adopción_e_Implementación_de_Arquitectura_en_Capas_Patrón_Repository_con_Spring_Data_JPA_y_Gestión_de_Ciclo_de_Vida_Singleton_en_DermaCare_Backend

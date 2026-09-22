@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Flujo de Pago con Mercado Pago Checkout Pro",
+    "output": "pago-mercadopago.html",
+    "viewBox": [980, 960],
+    "column_fit": "spread",
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "reserva-preferencia",
+        "label": "1. Reserva y Preferencia",
+        "focus": ["user", "web", "api", "mp"],
+        "note": "El usuario solicita la reserva temporal de 10 minutos y el backend genera la preferencia en Mercado Pago."
+      },
+      {
+        "id": "checkout-pago",
+        "label": "2. Pago en Pasarela",
+        "focus": ["user", "mp"],
+        "note": "El usuario interactua de forma segura directamente con la pasarela de Mercado Pago."
+      },
+      {
+        "id": "webhook-confirmacion",
+        "label": "3. Notificación y Confirmación",
+        "focus": ["mp", "api", "web", "user"],
+        "note": "Mercado Pago notifica via Webhook asincrono; el backend valida el pago y confirma el turno."
+      },
+      {
+        "id": "casos-alternativos",
+        "label": "4. Expiracion y Fallos",
+        "focus": ["api", "web", "user"],
+        "note": "Manejo de rechazo de transaccion y liberacion automatica del turno al vencer el lock de 10 min."
+      }
+    ]
+  },
+  "participants": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Usuario",
+      "sublabel": "Paciente"
+    },
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "Frontend",
+      "sublabel": "React UI"
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "Backend",
+      "sublabel": "Spring Boot"
+    },
+    {
+      "id": "mp",
+      "type": "cloud",
+      "label": "Mercado Pago",
+      "sublabel": "Checkout Pro"
+    }
+  ],
+  "segments": [
+    {
+      "from": 150,
+      "to": 330,
+      "label": "1. Solicitud de Reserva y Bloqueo (10 min)"
+    },
+    {
+      "from": 345,
+      "to": 525,
+      "label": "2. Redirección y Pago en Pasarela"
+    },
+    {
+      "from": 540,
+      "to": 740,
+      "label": "3. Notificación Webhook y Confirmación"
+    },
+    {
+      "from": 755,
+      "to": 880,
+      "label": "4. Flujos Alternativos y Expiración"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "from": "user",
+      "to": "web",
+      "y": 175,
+      "label": "Selecciona turno y confirma pagar seña ($3.000)",
+      "variant": "default"
+    },
+    {
+      "id": "msg-2",
+      "from": "web",
+      "to": "api",
+      "y": 210,
+      "label": "POST /api/appointments/{id}/reserve",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-3",
+      "from": "api",
+      "to": "mp",
+      "y": 245,
+      "label": "POST /checkout/preferences (items, back_urls, webhook)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "msg-4",
+      "from": "mp",
+      "to": "api",
+      "y": 280,
+      "label": "201 Created (id: preference_id, init_point)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-5",
+      "from": "api",
+      "to": "web",
+      "y": 312,
+      "label": "200 OK (init_point, lockedUntil: 10 min)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-6",
+      "from": "web",
+      "to": "user",
+      "y": 365,
+      "label": "Redirige a init_point (Checkout Pro)",
+      "variant": "default"
+    },
+    {
+      "id": "msg-7",
+      "from": "user",
+      "to": "mp",
+      "y": 405,
+      "label": "Ingresa medio de pago y autoriza cobro",
+      "variant": "security"
+    },
+    {
+      "id": "msg-8",
+      "from": "mp",
+      "to": "user",
+      "y": 485,
+      "label": "Redirige a back_urls.success",
+      "variant": "return"
+    },
+    {
+      "id": "msg-9",
+      "from": "mp",
+      "to": "api",
+      "y": 560,
+      "label": "Webhook: POST /api/webhooks/mercadopago?type=payment",
+      "variant": "dashed"
+    },
+    {
+      "id": "msg-10",
+      "from": "api",
+      "to": "mp",
+      "y": 595,
+      "label": "GET /v1/payments/{payment_id} (consulta autoritativa)",
+      "variant": "security"
+    },
+    {
+      "id": "msg-11",
+      "from": "mp",
+      "to": "api",
+      "y": 630,
+      "label": "200 OK (status: approved, external_reference: id)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-12",
+      "from": "api",
+      "to": "mp",
+      "y": 665,
+      "label": "200 OK (acuse de recibo Webhook)",
+      "variant": "return"
+    },
+    {
+      "id": "msg-13",
+      "from": "web",
+      "to": "api",
+      "y": 695,
+      "label": "GET /api/appointments/{id} (status: CONFIRMED)",
+      "variant": "default"
+    },
+    {
+      "id": "msg-14",
+      "from": "web",
+      "to": "user",
+      "y": 725,
+      "label": "Renderiza comprobante y turno confirmado",
+      "variant": "return"
+    },
+    {
+      "id": "msg-15",
+      "from": "mp",
+      "to": "api",
+      "y": 780,
+      "label": "Alt 1: Webhook rejected / cancelled (pago fallido)",
+      "variant": "dashed"
+    },
+    {
+      "id": "msg-16",
+      "from": "api",
+      "to": "web",
+      "y": 815,
+      "label": "Notifica rechazo (permite reintentar antes de expirar)",
+      "variant": "default"
+    },
+    {
+      "id": "msg-17",
+      "from": "api",
+      "to": "web",
+      "y": 855,
+      "label": "Alt 2: Expiracion cron (now > lockedUntil -> AVAILABLE)",
+      "variant": "dashed"
+    }
+  ],
+  "activations": [
+    {
+      "participant": "web",
+      "from": 170,
+      "to": 370,
+      "type": "frontend"
+    },
+    {
+      "participant": "api",
+      "from": 205,
+      "to": 320,
+      "type": "backend"
+    },
+    {
+      "participant": "mp",
+      "from": 240,
+      "to": 285,
+      "type": "cloud"
+    },
+    {
+      "participant": "mp",
+      "from": 400,
+      "to": 490,
+      "type": "cloud"
+    },
+    {
+      "participant": "api",
+      "from": 555,
+      "to": 670,
+      "type": "backend"
+    },
+    {
+      "participant": "web",
+      "from": 690,
+      "to": 730,
+      "type": "frontend"
+    },
+    {
+      "participant": "api",
+      "from": 775,
+      "to": 860,
+      "type": "backend"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Bloqueo Temporal de 10 Minutos",
+      "items": [
+        "El backend pasa el turno a PENDING_PAYMENT y fija lockedUntil por 10 min",
+        "Evita colisiones entre usuarios que intenten reservar la misma franja",
+        "Si el pago no se concreta en la ventana de tiempo, el slot vuelve a AVAILABLE"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Checkout Pro y Webhook Asincrono",
+      "items": [
+        "La creacion de preferencia inyecta items, external_reference y notification_url",
+        "La confirmacion real NUNCA depende del browser (back_urls son solo UX)",
+        "El webhook IPN de Mercado Pago es la fuente de verdad que gatilla la confirmacion"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Consulta Autoritativa e Idempotencia",
+      "items": [
+        "Al recibir el webhook, el backend consulta GET /v1/payments/{id} a Mercado Pago",
+        "Se verifica status == approved y que el monto coincida con la seña requerida",
+        "El turno pasa a CONFIRMED y se persiste el mercadoPagoPaymentId de forma idempotente"
+      ]
+    }
+  ]
+}

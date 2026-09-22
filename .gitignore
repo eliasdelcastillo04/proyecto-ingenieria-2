@@ -60,3 +60,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+graphify-out/
+*.visual-check.*

@@ -114,6 +114,8 @@ classDiagram
         <<interface>>
         +findAll() List
         +findById(id) Optional
+        +findByDni(dni) Optional
+        +existsByDni(dni) boolean
         +save(patient) Patient
         +delete(patient) void
     }
@@ -156,17 +158,50 @@ classDiagram
         +login(credentials) ResponseEntity
     }
 
-    class PatientController {
-        <<RestController>>
+    class PatientService {
+        <<Service>>
         -PatientRepository patientRepository
         +getAllPatients() List
+        +getPatientById(id) Optional
         +createPatient(patient) Patient
+        +updatePatient(id, updatedData) Patient
+        +deletePatient(id) void
+    }
+
+    class AppointmentService {
+        <<Service>>
+        -AppointmentRepository appointmentRepository
+        +getAllAppointments() List
+        +getAppointmentById(id) Optional
+        +createAppointment(appointment) Appointment
+        +updateStatus(id, newStatus) Appointment
+        +cancelAppointment(id) void
+    }
+
+    class PatientController {
+        <<RestController>>
+        -PatientService patientService
+        +getAllPatients() List
+        +getPatientById(id) ResponseEntity
+        +createPatient(patient) Patient
+        +updatePatient(id, patient) ResponseEntity
+        +deletePatient(id) ResponseEntity
     }
 
     class AppointmentController {
         <<RestController>>
-        -AppointmentRepository appointmentRepository
+        -AppointmentService appointmentService
         +getAllAppointments() List
+        +getAppointmentById(id) ResponseEntity
+        +createAppointment(appointment) Appointment
+        +updateStatus(id, status) ResponseEntity
+        +cancelAppointment(id) ResponseEntity
+    }
+
+    class GlobalExceptionHandler {
+        <<RestControllerAdvice>>
+        +handleIllegalArgument(ex) ResponseEntity
+        +handleIllegalState(ex) ResponseEntity
     }
 
     %% Relaciones entre entidades
@@ -181,9 +216,13 @@ classDiagram
     PatientRepository --> Patient : gestiona
     AppointmentRepository --> Appointment : gestiona
 
+    %% Servicios
+    PatientService --> PatientRepository : usa
+    AppointmentService --> AppointmentRepository : usa
+
     %% Controladores
-    PatientController --> PatientRepository : usa
-    AppointmentController --> AppointmentRepository : usa
+    PatientController --> PatientService : usa
+    AppointmentController --> AppointmentService : usa
     AuthController --> JwtService : usa
 
     %% Seguridad
@@ -210,8 +249,12 @@ classDiagram
 com.dermacare.backend
 ├── controllers/
 │   ├── AuthController          POST /api/auth/login
-│   ├── PatientController       GET /api/patients · POST /api/patients
-│   └── AppointmentController   GET /api/appointments
+│   ├── PatientController       GET /api/patients · POST /api/patients · GET/PUT/DELETE /api/patients/{id}
+│   ├── AppointmentController   GET /api/appointments · GET/POST /api/appointments/{id} · PATCH status · POST cancel
+│   └── GlobalExceptionHandler  @RestControllerAdvice (400 Bad Request / 409 Conflict)
+├── services/
+│   ├── PatientService          lógica de negocio y validación de pacientes
+│   └── AppointmentService      lógica de negocio y estados de turnos
 ├── entities/
 │   ├── Patient                 tabla: patients
 │   ├── Appointment             tabla: appointments
