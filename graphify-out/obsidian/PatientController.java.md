@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/controllers/PatientController.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # PatientController.java
@@ -17,4 +17,4 @@ tags:
 - [[PatientService]] - `imports` [EXTRACTED]
 - [[org.springframework.http.ResponseEntity]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

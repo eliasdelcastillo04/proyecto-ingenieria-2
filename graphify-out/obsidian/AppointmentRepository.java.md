@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/repositories/AppointmentRepository.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "org.springframework.stereotype.Repository"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/orgspringframeworkstereotypeRepository
 ---
 
 # AppointmentRepository.java
@@ -17,4 +17,4 @@ tags:
 - [[org.springframework.data.jpa.repository.JpaRepository]] - `imports` [EXTRACTED]
 - [[org.springframework.stereotype.Repository]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/orgspringframeworkstereotypeRepository

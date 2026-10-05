@@ -1,25 +1,19 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/UserRole.java"
+source_file: "frontend/src/types/index.ts"
 type: "code"
-community: "PatientControllerTest"
-location: "L3"
+community: "api.ts"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/apits
 ---
 
 # UserRole
 
 ## Connections
-- [[dot-getRole()]] - `references` [EXTRACTED]
-- [[dot-setRole()]] - `references` [EXTRACTED]
-- [[ADMIN_SECRETARIA]] - `case_of` [EXTRACTED]
-- [[AppointmentControllerTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentPaymentTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentServiceTest.java]] - `imports` [EXTRACTED]
-- [[MEDICA_PRESTADORA]] - `case_of` [EXTRACTED]
-- [[Profile]] - `references` [EXTRACTED]
-- [[UserRole.java]] - `contains` [EXTRACTED]
+- [[UserFormModal.tsx]] - `imports` [EXTRACTED]
+- [[api.ts]] - `imports` [EXTRACTED]
+- [[typesindex.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/apits

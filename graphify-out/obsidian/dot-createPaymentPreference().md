@@ -1,30 +1,25 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
+source_file: "backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java"
 type: "code"
-community: "PaymentPreferenceResponse"
-location: "L91"
+community: "MercadoPagoService"
+location: "L57"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/PaymentPreferenceResponse
+  - graphify/EXTRACTED
+  - community/MercadoPagoService
 ---
 
 # .createPaymentPreference()
 
 ## Connections
 - [[dot-createPaymentPreference()_1]] - `calls` [INFERRED]
-- [[dot-createPaymentPreference_Success_LocksAppointmentFor10MinutesAndSavesPreference()]] - `calls` [INFERRED]
-- [[dot-createPaymentPreference_ThrowsException_WhenAmountIsZeroOrNegative()]] - `calls` [INFERRED]
-- [[dot-createPaymentPreference_ThrowsException_WhenAppointmentAlreadyConfirmed()]] - `calls` [INFERRED]
-- [[dot-createPaymentPreference_ThrowsException_WhenAppointmentNotFound()]] - `calls` [INFERRED]
-- [[dot-createPreference()]] - `calls` [INFERRED]
-- [[dot-getPaymentUrl()_1]] - `calls` [INFERRED]
-- [[dot-getPreferenceId()_1]] - `calls` [INFERRED]
-- [[dot-getStatus()]] - `calls` [INFERRED]
-- [[dot-setLockedUntil()_1]] - `calls` [INFERRED]
-- [[dot-setMercadoPagoPreferenceId()]] - `calls` [INFERRED]
-- [[dot-setStatus()]] - `calls` [INFERRED]
-- [[AppointmentService]] - `method` [EXTRACTED]
-- [[PaymentPreferenceResponse]] - `calls` [EXTRACTED]
+- [[dot-getDepositAmount()_1]] - `calls` [INFERRED]
+- [[dot-getPayerEmail()]] - `calls` [INFERRED]
+- [[dot-getTitle()_1]] - `calls` [INFERRED]
+- [[AppointmentController]] - `method` [EXTRACTED]
+- [[CreatePaymentPreferenceRequest]] - `references` [EXTRACTED]
+- [[PaymentPreferenceResponse_1]] - `references` [EXTRACTED]
+- [[PostMapping_3]] - `references` [EXTRACTED]
+- [[org.springframework.http.ResponseEntity]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/controllers/PatientController.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # .getAllPatients()
@@ -17,4 +17,4 @@ tags:
 - [[Patient]] - `references` [EXTRACTED]
 - [[PatientController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "package.json"
-location: "L28"
+community: "devDependencies"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/devDependencies
 ---
 
 # @vitejs/plugin-react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/devDependencies

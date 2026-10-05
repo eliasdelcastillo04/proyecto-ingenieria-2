@@ -1,18 +1,18 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/MercadoPagoService.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/MercadoPagoService
 ---
 
 # MercadoPagoService
 
 ## Connections
-- [[dot-AppointmentService()]] - `calls` [EXTRACTED]
+- [[dot-AppointmentService()]] - `references` [EXTRACTED]
 - [[dot-MercadoPagoService()]] - `method` [EXTRACTED]
 - [[dot-callMercadoPagoApi()]] - `method` [EXTRACTED]
 - [[dot-createPreference()]] - `method` [EXTRACTED]
@@ -20,10 +20,11 @@ tags:
 - [[dot-resolveToken()]] - `method` [EXTRACTED]
 - [[AppointmentPaymentTest]] - `references` [EXTRACTED]
 - [[AppointmentService]] - `references` [EXTRACTED]
+- [[AppointmentServiceTest]] - `references` [EXTRACTED]
 - [[MercadoPagoService.java]] - `contains` [EXTRACTED]
 - [[PreferenceResult]] - `contains` [EXTRACTED]
 - [[org.slf4j.Logger]] - `references` [EXTRACTED]
 - [[org.springframework.stereotype.Service]] - `references` [EXTRACTED]
 - [[org.springframework.web.client.RestTemplate]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

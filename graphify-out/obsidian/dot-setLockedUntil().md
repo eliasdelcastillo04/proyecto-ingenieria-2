@@ -1,17 +1,17 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/dtos/PaymentPreferenceResponse.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "PaymentPreferenceResponse"
-location: "L55"
+community: "Appointment"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/Appointment
 ---
 
 # .setLockedUntil()
 
 ## Connections
-- [[PaymentPreferenceResponse]] - `method` [EXTRACTED]
+- [[Appointment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/Appointment

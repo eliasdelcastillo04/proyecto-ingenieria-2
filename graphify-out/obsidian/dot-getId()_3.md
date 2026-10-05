@@ -1,17 +1,17 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "ServiceEntity"
-location: "L39"
+community: "Appointment"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ServiceEntity
+  - community/Appointment
 ---
 
 # .getId()
 
 ## Connections
-- [[ServiceEntity]] - `method` [EXTRACTED]
+- [[Appointment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ServiceEntity
+#graphify/code #graphify/EXTRACTED #community/Appointment

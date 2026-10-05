@@ -5,8 +5,11 @@ import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import org.hibernate.annotations.Type;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "appointments")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Appointment {
 
     @Id
@@ -26,6 +29,7 @@ public class Appointment {
     private ServiceEntity service;
 
     @Column(name = "time_range", columnDefinition = "tstzrange", nullable = false)
+    @org.hibernate.annotations.ColumnTransformer(write = "?::tstzrange")
     private String timeRange;
 
     @Enumerated(EnumType.STRING)

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Consultation"
+community: "Appointment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Consultation
+  - community/Appointment
 ---
 
 # Table
 
 ## Connections
-- [[Consultation]] - `references` [EXTRACTED]
+- [[Appointment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Consultation
+#graphify/code #graphify/EXTRACTED #community/Appointment

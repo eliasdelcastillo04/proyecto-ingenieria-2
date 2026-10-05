@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/MercadoPagoService
 ---
 
 # org.springframework.web.client.RestTemplate
@@ -15,4 +15,4 @@ tags:
 - [[MercadoPagoService]] - `references` [EXTRACTED]
 - [[MercadoPagoService.java]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

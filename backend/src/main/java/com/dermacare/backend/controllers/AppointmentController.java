@@ -11,14 +11,19 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.dermacare.backend.entities.Payment;
+import com.dermacare.backend.services.PaymentService;
+
 @RestController
 @RequestMapping("/api/appointments")
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
+    private final PaymentService paymentService;
 
-    public AppointmentController(AppointmentService appointmentService) {
+    public AppointmentController(AppointmentService appointmentService, PaymentService paymentService) {
         this.appointmentService = appointmentService;
+        this.paymentService = paymentService;
     }
 
     @GetMapping
@@ -61,5 +66,36 @@ public class AppointmentController {
 
         PaymentPreferenceResponse response = appointmentService.createPaymentPreference(id, deposit, title, payerEmail);
         return ResponseEntity.ok(response);
+    }
+
+    public static class CashPaymentRequest {
+        private BigDecimal amount;
+        private String concept;
+        private String recordedBy;
+
+        public BigDecimal getAmount() { return amount; }
+        public void setAmount(BigDecimal amount) { this.amount = amount; }
+        public String getConcept() { return concept; }
+        public void setConcept(String concept) { this.concept = concept; }
+        public String getRecordedBy() { return recordedBy; }
+        public void setRecordedBy(String recordedBy) { this.recordedBy = recordedBy; }
+    }
+
+    @PostMapping("/{id}/payments/cash")
+    public ResponseEntity<Payment> registerCashPayment(
+            @PathVariable Long id,
+            @RequestBody(required = false) CashPaymentRequest request) {
+        BigDecimal amount = (request != null && request.getAmount() != null)
+                ? request.getAmount()
+                : new BigDecimal("3000.00");
+        String concept = (request != null && request.getConcept() != null)
+                ? request.getConcept()
+                : "Pago Seña en Efectivo";
+        String recordedBy = (request != null && request.getRecordedBy() != null)
+                ? request.getRecordedBy()
+                : "SECRETARIA";
+
+        Payment payment = paymentService.registerCashPayment(id, amount, concept, recordedBy);
+        return ResponseEntity.ok(payment);
     }
 }

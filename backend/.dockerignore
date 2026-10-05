@@ -1,0 +1,10 @@
+target/classes
+target/test-classes
+target/generated-sources
+target/maven-status
+target/surefire-reports
+target/generated-test-sources
+.git
+.idea
+*.iml
+.DS_Store

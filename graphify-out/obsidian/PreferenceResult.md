@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/MercadoPagoService.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/MercadoPagoService
 ---
 
 # PreferenceResult
@@ -20,4 +20,4 @@ tags:
 - [[dot-getPreferenceId()_1]] - `method` [EXTRACTED]
 - [[MercadoPagoService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

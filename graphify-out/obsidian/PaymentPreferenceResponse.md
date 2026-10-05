@@ -1,35 +1,20 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/dtos/PaymentPreferenceResponse.java"
+source_file: "frontend/src/types/index.ts"
 type: "code"
-community: "PaymentPreferenceResponse"
-location: "L6"
+community: "api.ts"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/apits
 ---
 
 # PaymentPreferenceResponse
 
 ## Connections
-- [[dot-PaymentPreferenceResponse()]] - `method` [EXTRACTED]
-- [[dot-createPaymentPreference()]] - `calls` [EXTRACTED]
-- [[dot-createPaymentPreference()_1]] - `references` [EXTRACTED]
-- [[dot-getAppointmentId()]] - `method` [EXTRACTED]
-- [[dot-getDepositAmount()]] - `method` [EXTRACTED]
-- [[dot-getLockedUntil()]] - `method` [EXTRACTED]
-- [[dot-getPaymentUrl()]] - `method` [EXTRACTED]
-- [[dot-getPreferenceId()]] - `method` [EXTRACTED]
-- [[dot-getTitle()]] - `method` [EXTRACTED]
-- [[dot-setAppointmentId()]] - `method` [EXTRACTED]
-- [[dot-setDepositAmount()]] - `method` [EXTRACTED]
-- [[dot-setLockedUntil()]] - `method` [EXTRACTED]
-- [[dot-setPaymentUrl()]] - `method` [EXTRACTED]
-- [[dot-setPreferenceId()]] - `method` [EXTRACTED]
-- [[dot-setTitle()]] - `method` [EXTRACTED]
-- [[AppointmentController.java]] - `imports` [EXTRACTED]
-- [[AppointmentPaymentTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentService.java]] - `imports` [EXTRACTED]
-- [[PaymentPreferenceResponse.java]] - `contains` [EXTRACTED]
+- [[BookingWizard.tsx]] - `imports` [EXTRACTED]
+- [[Hold]] - `references` [EXTRACTED]
+- [[api.ts]] - `imports` [EXTRACTED]
+- [[typesindex.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/apits

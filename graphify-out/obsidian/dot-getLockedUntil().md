@@ -1,18 +1,17 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/dtos/PaymentPreferenceResponse.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "PaymentPreferenceResponse"
-location: "L51"
+community: "Appointment"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/Appointment
 ---
 
 # .getLockedUntil()
 
 ## Connections
-- [[dot-createPaymentPreference_Success_LocksAppointmentFor10MinutesAndSavesPreference()]] - `calls` [INFERRED]
-- [[PaymentPreferenceResponse]] - `method` [EXTRACTED]
+- [[Appointment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/Appointment

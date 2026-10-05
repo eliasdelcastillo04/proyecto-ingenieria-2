@@ -1,10 +1,10 @@
 ---
 source_file: "frontend/package.json"
-type: "code"
+type: "concept"
 community: "package.json"
-location: "L26"
+location: "L31"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
   - community/packagejson
 ---
@@ -12,6 +12,6 @@ tags:
 # @types/react
 
 ## Connections
-- [[devDependencies]] - `contains` [EXTRACTED]
+- [[package.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/concept #graphify/EXTRACTED #community/packagejson

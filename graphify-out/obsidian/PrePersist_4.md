@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Consultation"
+community: "Appointment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Consultation
+  - community/Appointment
 ---
 
 # PrePersist
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-onCreate()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Consultation
+#graphify/code #graphify/EXTRACTED #community/Appointment

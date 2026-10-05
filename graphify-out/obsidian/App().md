@@ -1,19 +1,18 @@
 ---
-source_file: "frontend/src/App.jsx"
+source_file: "frontend/src/App.tsx"
 type: "code"
-community: "App.jsx"
-location: "L27"
+community: "react"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Appjsx
+  - community/react
 ---
 
 # App()
 
 ## Connections
-- [[App.jsx]] - `contains` [EXTRACTED]
-- [[App.test.jsx]] - `imports` [EXTRACTED]
-- [[main.jsx]] - `imports` [EXTRACTED]
+- [[App.tsx]] - `contains` [EXTRACTED]
+- [[main.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Appjsx
+#graphify/code #graphify/EXTRACTED #community/react

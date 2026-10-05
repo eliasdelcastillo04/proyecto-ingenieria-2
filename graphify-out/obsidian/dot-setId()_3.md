@@ -1,17 +1,18 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Payment.java"
 type: "code"
-community: "ServiceEntity"
-location: "L40"
+community: "Payment"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ServiceEntity
+  - community/Payment
 ---
 
 # .setId()
 
 ## Connections
-- [[ServiceEntity]] - `method` [EXTRACTED]
+- [[dot-registerCashPayment_Success()]] - `calls` [INFERRED]
+- [[Payment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ServiceEntity
+#graphify/code #graphify/EXTRACTED #community/Payment

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "Patient"
+community: "PatientServiceTest"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientServiceTest
 ---
 
 # PatientServiceTest
@@ -28,7 +28,7 @@ tags:
 - [[dot-getPatientById_NullId_ThrowsIllegalArgumentException()]] - `method` [EXTRACTED]
 - [[dot-getPatientById_WhenExists_ReturnsOptionalPatient()]] - `method` [EXTRACTED]
 - [[dot-getPatientById_WhenNotFound_ReturnsEmptyOptional()]] - `method` [EXTRACTED]
-- [[dot-setUp()]] - `method` [EXTRACTED]
+- [[dot-setUp()_7]] - `method` [EXTRACTED]
 - [[dot-updatePatient_AgeGreaterThan150_ThrowsIllegalArgumentException()]] - `method` [EXTRACTED]
 - [[dot-updatePatient_DuplicateDniBelongingToAnotherPatient_ThrowsIllegalArgumentException()]] - `method` [EXTRACTED]
 - [[dot-updatePatient_NegativeAge_ThrowsIllegalArgumentException()]] - `method` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[org.junit.jupiter.api.extension.ExtendWith]] - `references` [EXTRACTED]
 - [[org.mockito.junit.jupiter.MockitoExtension]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientServiceTest

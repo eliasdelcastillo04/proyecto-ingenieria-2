@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/AppointmentPaymentTest.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/MercadoPagoService
 ---
 
 # AppointmentPaymentTest
@@ -16,7 +16,7 @@ tags:
 - [[dot-createPaymentPreference_ThrowsException_WhenAmountIsZeroOrNegative()]] - `method` [EXTRACTED]
 - [[dot-createPaymentPreference_ThrowsException_WhenAppointmentAlreadyConfirmed()]] - `method` [EXTRACTED]
 - [[dot-createPaymentPreference_ThrowsException_WhenAppointmentNotFound()]] - `method` [EXTRACTED]
-- [[dot-setUp()_1]] - `method` [EXTRACTED]
+- [[dot-setUp()]] - `method` [EXTRACTED]
 - [[Appointment]] - `references` [EXTRACTED]
 - [[AppointmentPaymentTest.java]] - `contains` [EXTRACTED]
 - [[AppointmentRepository]] - `references` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[org.junit.jupiter.api.extension.ExtendWith]] - `references` [EXTRACTED]
 - [[org.mockito.junit.jupiter.MockitoExtension]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

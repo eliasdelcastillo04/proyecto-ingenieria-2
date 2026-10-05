@@ -24,8 +24,11 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.configure(http))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**").permitAll() // Login/Register are public
-                .requestMatchers("/api/public/**").permitAll()
+                .requestMatchers("/api/auth/**", "/api/v1/auth/**").permitAll() // Login/Register are public
+                .requestMatchers("/api/public/**", "/api/v1/public/**").permitAll()
+                .requestMatchers("/api/webhooks/**", "/api/v1/webhooks/**").permitAll() // Mercado Pago Webhooks
+                .requestMatchers("/api/analytics/**", "/api/v1/analytics/**").permitAll() // Dashboard analytics
+                .requestMatchers("/error").permitAll()
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session

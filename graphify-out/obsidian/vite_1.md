@@ -1,18 +1,18 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "package.json"
-location: "L33"
+community: "vite.config.ts"
+location: "L39"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/viteconfigts
 ---
 
 # vite
 
 ## Connections
 - [[package.json]] - `imports` [EXTRACTED]
-- [[vite.config.js]] - `imports_from` [EXTRACTED]
+- [[vite.config.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/packagejson
+#graphify/concept #graphify/EXTRACTED #community/viteconfigts

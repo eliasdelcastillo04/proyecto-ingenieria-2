@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ServiceEntity"
+community: "Payment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ServiceEntity
+  - community/Payment
 ---
 
 # Table
 
 ## Connections
-- [[ServiceEntity]] - `references` [EXTRACTED]
+- [[Payment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ServiceEntity
+#graphify/code #graphify/EXTRACTED #community/Payment

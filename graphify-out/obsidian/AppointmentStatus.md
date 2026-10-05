@@ -1,32 +1,19 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/AppointmentStatus.java"
+source_file: "frontend/src/types/index.ts"
 type: "code"
-community: "PatientControllerTest"
-location: "L3"
+community: "api.ts"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/apits
 ---
 
 # AppointmentStatus
 
 ## Connections
-- [[dot-getStatus()]] - `references` [EXTRACTED]
-- [[dot-setStatus()]] - `references` [EXTRACTED]
-- [[dot-updateStatus()_1]] - `references` [EXTRACTED]
-- [[dot-updateStatus()]] - `references` [EXTRACTED]
-- [[AVAILABLE]] - `case_of` [EXTRACTED]
-- [[Appointment]] - `references` [EXTRACTED]
-- [[AppointmentController.java]] - `imports` [EXTRACTED]
-- [[AppointmentControllerTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentPaymentTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentService.java]] - `imports` [EXTRACTED]
-- [[AppointmentServiceTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentStatus.java]] - `contains` [EXTRACTED]
-- [[CANCELLED]] - `case_of` [EXTRACTED]
-- [[COMPLETED]] - `case_of` [EXTRACTED]
-- [[CONFIRMED]] - `case_of` [EXTRACTED]
-- [[PENDING_PAYMENT]] - `case_of` [EXTRACTED]
+- [[api.ts]] - `imports` [EXTRACTED]
+- [[appointmentStatus.ts]] - `imports` [EXTRACTED]
+- [[typesindex.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/apits

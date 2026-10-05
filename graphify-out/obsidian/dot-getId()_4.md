@@ -1,17 +1,18 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/Consultation.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Payment.java"
 type: "code"
-community: "Consultation"
-location: "L56"
+community: "PaymentRepository"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Consultation
+  - community/PaymentRepository
 ---
 
 # .getId()
 
 ## Connections
-- [[Consultation]] - `method` [EXTRACTED]
+- [[dot-registerCashPayment()]] - `calls` [INFERRED]
+- [[Payment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Consultation
+#graphify/code #graphify/EXTRACTED #community/PaymentRepository

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Profile.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L45"
+community: "Profile"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/Profile
 ---
 
 # .getCreatedAt()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Profile]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/Profile

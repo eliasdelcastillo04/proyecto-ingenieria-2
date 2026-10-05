@@ -15,9 +15,11 @@ tags:
 - [[Appointment]] - `imports` [EXTRACTED]
 - [[AppointmentController]] - `contains` [EXTRACTED]
 - [[AppointmentService]] - `imports` [EXTRACTED]
-- [[AppointmentStatus]] - `imports` [EXTRACTED]
+- [[AppointmentStatus_1]] - `imports` [EXTRACTED]
 - [[CreatePaymentPreferenceRequest]] - `imports` [EXTRACTED]
-- [[PaymentPreferenceResponse]] - `imports` [EXTRACTED]
+- [[Payment]] - `imports` [EXTRACTED]
+- [[PaymentPreferenceResponse_1]] - `imports` [EXTRACTED]
+- [[PaymentService]] - `imports` [EXTRACTED]
 - [[org.springframework.http.ResponseEntity]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity

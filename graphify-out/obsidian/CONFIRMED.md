@@ -1,17 +1,17 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/AppointmentStatus.java"
 type: "code"
-community: "PatientControllerTest"
+community: "AppointmentStatus"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/AppointmentStatus
 ---
 
 # CONFIRMED
 
 ## Connections
-- [[AppointmentStatus]] - `case_of` [EXTRACTED]
+- [[AppointmentStatus_1]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/AppointmentStatus

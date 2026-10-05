@@ -1,25 +1,27 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java"
+source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
 type: "code"
-community: "org.springframework.http.ResponseEntity"
-location: "L52"
+community: "MercadoPagoService"
+location: "L103"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/orgspringframeworkhttpResponseEntity
+  - graphify/INFERRED
+  - community/MercadoPagoService
 ---
 
 # .createPaymentPreference()
 
 ## Connections
 - [[dot-createPaymentPreference()]] - `calls` [INFERRED]
-- [[dot-getDepositAmount()_1]] - `calls` [INFERRED]
-- [[dot-getPayerEmail()]] - `calls` [INFERRED]
-- [[dot-getTitle()_1]] - `calls` [INFERRED]
-- [[AppointmentController]] - `method` [EXTRACTED]
-- [[CreatePaymentPreferenceRequest]] - `references` [EXTRACTED]
-- [[PaymentPreferenceResponse]] - `references` [EXTRACTED]
-- [[PostMapping_1]] - `references` [EXTRACTED]
-- [[org.springframework.http.ResponseEntity]] - `references` [EXTRACTED]
+- [[dot-createPaymentPreference_Success_LocksAppointmentFor10MinutesAndSavesPreference()]] - `calls` [INFERRED]
+- [[dot-createPaymentPreference_ThrowsException_WhenAmountIsZeroOrNegative()]] - `calls` [INFERRED]
+- [[dot-createPaymentPreference_ThrowsException_WhenAppointmentAlreadyConfirmed()]] - `calls` [INFERRED]
+- [[dot-createPaymentPreference_ThrowsException_WhenAppointmentNotFound()]] - `calls` [INFERRED]
+- [[dot-createPreference()]] - `calls` [INFERRED]
+- [[dot-getPaymentUrl()_1]] - `calls` [INFERRED]
+- [[dot-getPreferenceId()_1]] - `calls` [INFERRED]
+- [[AppointmentService]] - `method` [EXTRACTED]
+- [[PaymentPreferenceResponse_2]] - `calls` [EXTRACTED]
+- [[PaymentPreferenceResponse_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity
+#graphify/code #graphify/INFERRED #community/MercadoPagoService

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "org.springframework.http.ResponseEntity"
+community: "JwtService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgspringframeworkhttpResponseEntity
+  - community/JwtService
 ---
 
 # PostMapping
 
 ## Connections
-- [[dot-cancelAppointment()_1]] - `references` [EXTRACTED]
-- [[dot-createAppointment()_1]] - `references` [EXTRACTED]
-- [[dot-createPaymentPreference()_1]] - `references` [EXTRACTED]
+- [[dot-login()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity
+#graphify/code #graphify/EXTRACTED #community/JwtService

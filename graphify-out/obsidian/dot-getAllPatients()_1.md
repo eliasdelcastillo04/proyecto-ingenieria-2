@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/PatientService.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L21"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Patient
+  - community/PatientService
 ---
 
 # .getAllPatients()
@@ -20,4 +20,4 @@ tags:
 - [[PatientService]] - `method` [EXTRACTED]
 - [[org.springframework.transaction.annotation.Transactional]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Patient
+#graphify/code #graphify/INFERRED #community/PatientService

@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
 community: "ServiceEntity"
-location: "L72"
+location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED

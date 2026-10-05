@@ -1,11 +1,11 @@
 ---
 type: community
-members: 56
+members: 58
 ---
 
 # JwtService
 
-**Members:** 56 nodes
+**Members:** 58 nodes
 
 ## Members
 - [[dot-AuthController()]] - code - backend/src/main/java/com/dermacare/backend/controllers/AuthController.java
@@ -34,6 +34,7 @@ members: 56
 - [[dot-isTokenValid_MalformedToken_ThrowsMalformedJwtException()]] - code - backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java
 - [[dot-isTokenValid_ValidTokenAndDifferentUsername_ReturnsFalse()]] - code - backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java
 - [[dot-isTokenValid_ValidTokenAndMatchingUsername_ReturnsTrue()]] - code - backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java
+- [[dot-login()]] - code - backend/src/main/java/com/dermacare/backend/controllers/AuthController.java
 - [[dot-securityFilterChain()]] - code - backend/src/main/java/com/dermacare/backend/security/SecurityConfig.java
 - [[dot-tearDown()]] - code - backend/src/test/java/com/dermacare/backend/security/JwtAuthenticationFilterTest.java
 - [[AuthController]] - code - backend/src/main/java/com/dermacare/backend/controllers/AuthController.java
@@ -46,7 +47,8 @@ members: 56
 - [[JwtService.java]] - code - backend/src/main/java/com/dermacare/backend/security/JwtService.java
 - [[JwtServiceTest]] - code - backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java
 - [[JwtServiceTest.java]] - code - backend/src/test/java/com/dermacare/backend/security/JwtServiceTest.java
-- [[Override]] - code
+- [[Override_1]] - code
+- [[PostMapping_1]] - code
 - [[RequestMapping_1]] - code
 - [[RestController_1]] - code
 - [[SecurityConfig]] - code - backend/src/main/java/com/dermacare/backend/security/SecurityConfig.java
@@ -74,13 +76,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_org.junit.jupiter.api.Test]]
-- 13 edges to [[_COMMUNITY_PatientControllerTest]]
+- 9 edges to [[_COMMUNITY_PatientControllerTest]]
+- 4 edges to [[_COMMUNITY_AppointmentService]]
+- 4 edges to [[_COMMUNITY_PaymentRepository]]
 - 2 edges to [[_COMMUNITY_org.springframework.http.ResponseEntity]]
-- 2 edges to [[_COMMUNITY_PaymentPreferenceResponse]]
 
 ## Top bridge nodes
+- [[JwtAuthenticationFilterTest.java]] - degree 9, connects to 3 communities
 - [[JwtService]] - degree 19, connects to 2 communities
-- [[JwtAuthenticationFilterTest.java]] - degree 9, connects to 2 communities
+- [[JwtAuthenticationFilterTest]] - degree 17, connects to 2 communities
 - [[JwtServiceTest.java]] - degree 4, connects to 2 communities
-- [[JwtAuthenticationFilterTest]] - degree 17, connects to 1 community
 - [[JwtServiceTest]] - degree 11, connects to 1 community

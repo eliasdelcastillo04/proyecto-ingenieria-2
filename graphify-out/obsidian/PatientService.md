@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/PatientService.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # PatientService
@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-PatientController()]] - `references` [EXTRACTED]
 - [[dot-PatientService()]] - `method` [EXTRACTED]
-- [[dot-createPatient()_1]] - `method` [EXTRACTED]
+- [[dot-createPatient()]] - `method` [EXTRACTED]
 - [[dot-deletePatient()_1]] - `method` [EXTRACTED]
 - [[dot-getAllPatients()_1]] - `method` [EXTRACTED]
 - [[dot-getPatientById()_1]] - `method` [EXTRACTED]
-- [[dot-updatePatient()_1]] - `method` [EXTRACTED]
+- [[dot-updatePatient()]] - `method` [EXTRACTED]
 - [[PatientController]] - `references` [EXTRACTED]
 - [[PatientController.java]] - `imports` [EXTRACTED]
 - [[PatientControllerTest]] - `references` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[org.springframework.stereotype.Service]] - `references` [EXTRACTED]
 - [[org.springframework.transaction.annotation.Transactional]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

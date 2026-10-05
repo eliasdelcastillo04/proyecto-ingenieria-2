@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "org.junit.jupiter.api.Test"
+community: "org.springframework.http.ResponseEntity"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/orgspringframeworkhttpResponseEntity
 ---
 
 # GetMapping
 
 ## Connections
-- [[dot-getAllAppointments()]] - `references` [EXTRACTED]
-- [[dot-getAppointmentById()]] - `references` [EXTRACTED]
+- [[dot-getAllAppointments()_1]] - `references` [EXTRACTED]
+- [[dot-getAppointmentById()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity

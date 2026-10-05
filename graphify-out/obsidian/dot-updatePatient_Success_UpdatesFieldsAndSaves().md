@@ -1,50 +1,20 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "Patient"
+community: "PatientServiceTest"
 location: "L169"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Patient
+  - graphify/EXTRACTED
+  - community/PatientServiceTest
 ---
 
 # .updatePatient_Success_UpdatesFieldsAndSaves()
 
 ## Connections
-- [[dot-getAge()]] - `calls` [INFERRED]
-- [[dot-getAllergies()]] - `calls` [INFERRED]
-- [[dot-getContactEmail()]] - `calls` [INFERRED]
-- [[dot-getContactPhone()]] - `calls` [INFERRED]
-- [[dot-getDni()]] - `calls` [INFERRED]
-- [[dot-getFirstName()]] - `calls` [INFERRED]
-- [[dot-getGynecologicalHistory()]] - `calls` [INFERRED]
-- [[dot-getHabitualMedication()]] - `calls` [INFERRED]
-- [[dot-getLastName()]] - `calls` [INFERRED]
-- [[dot-getPathologicalHistory()]] - `calls` [INFERRED]
-- [[dot-getProfession()]] - `calls` [INFERRED]
-- [[dot-getSpfUse()]] - `calls` [INFERRED]
-- [[dot-getSunExposure()]] - `calls` [INFERRED]
-- [[dot-getSurgicalHistory()]] - `calls` [INFERRED]
-- [[dot-getToxicHabits()]] - `calls` [INFERRED]
-- [[dot-setAge()]] - `calls` [INFERRED]
-- [[dot-setAllergies()]] - `calls` [INFERRED]
-- [[dot-setContactEmail()]] - `calls` [INFERRED]
-- [[dot-setContactPhone()]] - `calls` [INFERRED]
-- [[dot-setDni()]] - `calls` [INFERRED]
-- [[dot-setFirstName()]] - `calls` [INFERRED]
-- [[dot-setGynecologicalHistory()]] - `calls` [INFERRED]
-- [[dot-setHabitualMedication()]] - `calls` [INFERRED]
-- [[dot-setLastName()]] - `calls` [INFERRED]
-- [[dot-setPathologicalHistory()]] - `calls` [INFERRED]
-- [[dot-setProfession()]] - `calls` [INFERRED]
-- [[dot-setSpfUse()]] - `calls` [INFERRED]
-- [[dot-setSunExposure()]] - `calls` [INFERRED]
-- [[dot-setSurgicalHistory()]] - `calls` [INFERRED]
-- [[dot-setToxicHabits()]] - `calls` [INFERRED]
-- [[dot-updatePatient()_1]] - `calls` [INFERRED]
-- [[Patient]] - `calls` [EXTRACTED]
+- [[dot-updatePatient()]] - `calls` [INFERRED]
+- [[Patient_2]] - `calls` [EXTRACTED]
 - [[PatientServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientServiceTest

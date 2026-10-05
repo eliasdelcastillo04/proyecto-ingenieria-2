@@ -1,6 +1,6 @@
 # Modelo de Clases — DermaCare Backend
 
-Sistema de Gestión Dermatológica · Spring Boot 4.1.0 · Java 17
+Sistema de Gestión Dermatológica · Spring Boot 3.2.5 / 4.1.0 · Java 17
 
 ---
 
@@ -23,6 +23,21 @@ classDiagram
         CONFIRMED
         CANCELLED
         COMPLETED
+    }
+
+    class PaymentMethod {
+        <<enumeration>>
+        CASH
+        MERCADO_PAGO
+        BANK_TRANSFER
+    }
+
+    class PaymentStatus {
+        <<enumeration>>
+        PENDING
+        APPROVED
+        REJECTED
+        REFUNDED
     }
 
     class Profile {
@@ -93,6 +108,33 @@ classDiagram
         +getStatus() AppointmentStatus
     }
 
+    class Payment {
+        <<Entity>>
+        +Long id
+        +Appointment appointment
+        +BigDecimal amount
+        +PaymentMethod paymentMethod
+        +PaymentStatus status
+        +String concept
+        +LocalDateTime transactionDate
+        +String externalReference
+        +String recordedBy
+        +getId() Long
+        +getAmount() BigDecimal
+    }
+
+    class CalendarBlock {
+        <<Entity>>
+        +Long id
+        +Profile doctor
+        +ZonedDateTime startTime
+        +ZonedDateTime endTime
+        +String reason
+        +String createdBy
+        +LocalDateTime createdAt
+        +getId() Long
+    }
+
     class Consultation {
         <<Entity>>
         +Long id
@@ -128,6 +170,47 @@ classDiagram
         +delete(appointment) void
     }
 
+    class PaymentRepository {
+        <<interface>>
+        +findByAppointmentId(id) List
+        +findByStatus(status) List
+        +calculateTotalApprovedAmount() BigDecimal
+        +calculateTodayApprovedAmount(startOfDay) BigDecimal
+    }
+
+    class CalendarBlockRepository {
+        <<interface>>
+        +findByDoctorId(doctorId) List
+        +findOverlappingBlocks(doctorId, start, end) List
+    }
+
+    class IAppointmentDao {
+        <<interface>>
+        +findById(id) Optional
+        +findAll() List
+        +findByStatus(status) List
+        +save(appointment) Appointment
+        +delete(appointment) void
+    }
+
+    class AppointmentDaoImpl {
+        <<DAO>>
+        -EntityManager entityManager
+        +findById(id) Optional
+        +findAll() List
+        +findByStatus(status) List
+        +save(appointment) Appointment
+        +delete(appointment) void
+    }
+
+    class CryptoKeyRegistry {
+        <<Singleton>>
+        -Map keyStore
+        +getInstance() CryptoKeyRegistry$
+        +getKey(alias) byte[]
+        +registerKey(alias, key) void
+    }
+
     class JwtService {
         <<Service>>
         -String secretKey
@@ -135,9 +218,6 @@ classDiagram
         +extractUsername(token) String
         +extractClaim(token, resolver) Object
         +isTokenValid(token, username) boolean
-        -isTokenExpired(token) boolean
-        -extractAllClaims(token) Claims
-        -getSignInKey() SecretKey
     }
 
     class JwtAuthenticationFilter {
@@ -171,11 +251,30 @@ classDiagram
     class AppointmentService {
         <<Service>>
         -AppointmentRepository appointmentRepository
+        -MercadoPagoService mercadoPagoService
         +getAllAppointments() List
         +getAppointmentById(id) Optional
         +createAppointment(appointment) Appointment
+        +hasCollision(appointment) boolean
         +updateStatus(id, newStatus) Appointment
         +cancelAppointment(id) void
+        +createPaymentPreference(id, deposit, title, email) PaymentPreferenceResponse
+    }
+
+    class PaymentService {
+        <<Service>>
+        -PaymentRepository paymentRepository
+        -AppointmentRepository appointmentRepository
+        +registerCashPayment(appointmentId, amount, concept, recordedBy) Payment
+        +processMercadoPagoWebhook(payload, eventType, paymentId) boolean
+        +getCollectionsSummary() Map
+        +getAllPayments() List
+    }
+
+    class AppointmentCleanupScheduler {
+        <<Component>>
+        -AppointmentRepository appointmentRepository
+        +releaseExpiredPendingAppointments() void
     }
 
     class PatientController {
@@ -191,11 +290,28 @@ classDiagram
     class AppointmentController {
         <<RestController>>
         -AppointmentService appointmentService
+        -PaymentService paymentService
         +getAllAppointments() List
         +getAppointmentById(id) ResponseEntity
         +createAppointment(appointment) Appointment
         +updateStatus(id, status) ResponseEntity
         +cancelAppointment(id) ResponseEntity
+        +createPaymentPreference(id, request) ResponseEntity
+        +registerCashPayment(id, request) ResponseEntity
+    }
+
+    class WebhookController {
+        <<RestController>>
+        -PaymentService paymentService
+        +handleMercadoPagoWebhook(type, topic, dataId, id, payload) ResponseEntity
+    }
+
+    class AnalyticsController {
+        <<RestController>>
+        -PaymentService paymentService
+        -AppointmentService appointmentService
+        +getCollectionsMetrics() ResponseEntity
+        +getDashboardMetrics() ResponseEntity
     }
 
     class GlobalExceptionHandler {
@@ -209,20 +325,37 @@ classDiagram
     Appointment --> Patient : patient
     Appointment --> ServiceEntity : service
     Consultation --> Appointment : appointment
+    Payment --> Appointment : appointment
+    CalendarBlock --> Profile : doctor
     Profile --> UserRole : role
     Appointment --> AppointmentStatus : status
+    Payment --> PaymentMethod : paymentMethod
+    Payment --> PaymentStatus : status
+
+    %% DAO Pattern
+    AppointmentDaoImpl ..|> IAppointmentDao : implements
 
     %% Repositorios
     PatientRepository --> Patient : gestiona
     AppointmentRepository --> Appointment : gestiona
+    PaymentRepository --> Payment : gestiona
+    CalendarBlockRepository --> CalendarBlock : gestiona
 
     %% Servicios
     PatientService --> PatientRepository : usa
     AppointmentService --> AppointmentRepository : usa
+    AppointmentService --> MercadoPagoService : usa
+    PaymentService --> PaymentRepository : usa
+    PaymentService --> AppointmentRepository : usa
+    AppointmentCleanupScheduler --> AppointmentRepository : usa
 
     %% Controladores
     PatientController --> PatientService : usa
     AppointmentController --> AppointmentService : usa
+    AppointmentController --> PaymentService : usa
+    WebhookController --> PaymentService : usa
+    AnalyticsController --> PaymentService : usa
+    AnalyticsController --> AppointmentService : usa
     AuthController --> JwtService : usa
 
     %% Seguridad
@@ -234,12 +367,14 @@ classDiagram
 
 ## Relaciones entre entidades
 
-| Desde | Tipo | Hasta | Columna FK | Nulable |
-|-------|------|-------|------------|---------|
-| `Appointment` | `@ManyToOne` | `Profile` | `doctor_id` | No |
-| `Appointment` | `@ManyToOne` | `Patient` | `patient_id` | Sí |
-| `Appointment` | `@ManyToOne` | `ServiceEntity` | `service_id` | Sí |
-| `Consultation` | `@OneToOne` | `Appointment` | `appointment_id` | No |
+| Desde | Tipo | Hasta | Columna FK | Nulable | Propósito |
+|-------|------|-------|------------|---------|-----------|
+| `Appointment` | `@ManyToOne` | `Profile` | `doctor_id` | No | Profesional asignado |
+| `Appointment` | `@ManyToOne` | `Patient` | `patient_id` | Sí | Paciente citado |
+| `Appointment` | `@ManyToOne` | `ServiceEntity` | `service_id` | Sí | Tratamiento solicitado |
+| `Payment` | `@ManyToOne` | `Appointment` | `appointment_id` | No | Transacción de seña/pago |
+| `CalendarBlock`| `@ManyToOne` | `Profile` | `doctor_id` | No | Bloqueo horario de médica |
+| `Consultation` | `@OneToOne` | `Appointment` | `appointment_id` | No | Historia clínica del turno |
 
 ---
 
@@ -250,26 +385,39 @@ com.dermacare.backend
 ├── controllers/
 │   ├── AuthController          POST /api/auth/login
 │   ├── PatientController       GET /api/patients · POST /api/patients · GET/PUT/DELETE /api/patients/{id}
-│   ├── AppointmentController   GET /api/appointments · GET/POST /api/appointments/{id} · PATCH status · POST cancel
+│   ├── AppointmentController   GET/POST /api/appointments · PATCH status · POST cancel · POST payment-preference · POST payments/cash
+│   ├── WebhookController       POST /api/webhooks/mercadopago (Confirmación asíncrona de pagos)
+│   ├── AnalyticsController     GET /api/analytics/collections · GET /api/analytics/dashboard
 │   └── GlobalExceptionHandler  @RestControllerAdvice (400 Bad Request / 409 Conflict)
 ├── services/
-│   ├── PatientService          lógica de negocio y validación de pacientes
-│   └── AppointmentService      lógica de negocio y estados de turnos
+│   ├── PatientService          Lógica de negocio y validación de pacientes
+│   ├── AppointmentService      Lógica de agenda, colisiones horarias y preferencias de pago
+│   ├── PaymentService          Transacciones financieras (Efectivo y Mercado Pago) y analítica
+│   ├── MercadoPagoService      Integración con la API Checkout Pro de Mercado Pago
+│   └── AppointmentCleanupScheduler Tarea programada (@Scheduled) de expiración de bloqueos de 10 min
+├── dao/
+│   ├── IAppointmentDao         Interfaz formal del patrón DAO
+│   └── AppointmentDaoImpl      Implementación canónica con EntityManager
 ├── entities/
-│   ├── Patient                 tabla: patients
-│   ├── Appointment             tabla: appointments
-│   ├── Consultation            tabla: consultations
-│   ├── Profile                 tabla: profiles
-│   ├── ServiceEntity           tabla: services
-│   ├── AppointmentStatus       enum
-│   └── UserRole                enum
+│   ├── Patient                 Entidad paciente
+│   ├── Appointment             Entidad turno / cita
+│   ├── Payment                 Entidad transaccion_pago (historial multi-intento)
+│   ├── CalendarBlock           Entidad bloqueo de agenda (vacaciones/cierre)
+│   ├── Consultation            Entidad atención clínica
+│   ├── Profile                 Entidad usuario / perfil
+│   ├── ServiceEntity           Entidad catálogo de servicio
+│   ├── AppointmentStatus       Enum estados de turno
+│   ├── PaymentMethod           Enum medios de pago (CASH, MERCADO_PAGO, BANK_TRANSFER)
+│   ├── PaymentStatus           Enum estados de pago (PENDING, APPROVED, REJECTED, REFUNDED)
+│   └── UserRole                Enum roles (ADMIN_SECRETARIA, MEDICA_PRESTADORA)
 ├── repositories/
 │   ├── PatientRepository       JpaRepository<Patient, Long>
-│   └── AppointmentRepository   JpaRepository<Appointment, Long>
+│   ├── AppointmentRepository   JpaRepository<Appointment, Long>
+│   ├── PaymentRepository       JpaRepository<Payment, Long>
+│   └── CalendarBlockRepository JpaRepository<CalendarBlock, Long>
 └── security/
-    ├── JwtService              manejo de tokens JWT
-    ├── JwtAuthenticationFilter filtro HTTP (OncePerRequestFilter)
-    └── SecurityConfig          cadena de seguridad Spring
+    ├── CryptoKeyRegistry       Singleton Thread-Safe (Bill Pugh Holder Idiom)
+    ├── JwtService              Manejo de tokens JWT
+    ├── JwtAuthenticationFilter Filtro HTTP (OncePerRequestFilter)
+    └── SecurityConfig          Configuración de seguridad Spring y CORS
 ```
-
-> **Deuda técnica:** `Consultation` y `ServiceEntity` tienen entidad JPA pero no tienen controlador ni repositorio propio todavía.

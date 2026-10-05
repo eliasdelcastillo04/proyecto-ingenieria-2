@@ -5,7 +5,7 @@ community: "org.junit.jupiter.api.Test"
 location: "L118"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/orgjunitjupiterapiTest
 ---
 
@@ -13,11 +13,8 @@ tags:
 
 ## Connections
 - [[dot-createAppointment()]] - `calls` [INFERRED]
-- [[dot-setId()_1]] - `calls` [INFERRED]
-- [[dot-setStatus()]] - `calls` [INFERRED]
-- [[dot-setTimeRange()]] - `calls` [INFERRED]
 - [[Appointment]] - `calls` [INFERRED]
 - [[AppointmentControllerTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest

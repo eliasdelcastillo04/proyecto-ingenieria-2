@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/MercadoPagoService
 ---
 
 # RestTemplate
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-MercadoPagoService()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

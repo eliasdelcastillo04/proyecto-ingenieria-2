@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Patient.java"
 type: "code"
 community: "Patient"
-location: "L6"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,8 @@ tags:
 # Patient
 
 ## Connections
-- [[dot-createPatient()]] - `references` [EXTRACTED]
 - [[dot-createPatient()_1]] - `references` [EXTRACTED]
+- [[dot-createPatient()]] - `references` [EXTRACTED]
 - [[dot-createPatient_Authenticated_SavesAndReturnsCreatedPatient()]] - `calls` [INFERRED]
 - [[dot-createPatient_InvalidData_Returns400BadRequest()]] - `calls` [INFERRED]
 - [[dot-createPatient_Unauthenticated_ReturnsForbiddenOrUnauthorized()]] - `calls` [INFERRED]
@@ -22,7 +22,6 @@ tags:
 - [[dot-getAllPatients()]] - `references` [EXTRACTED]
 - [[dot-getAllPatients()_1]] - `references` [EXTRACTED]
 - [[dot-getAllPatients_Authenticated_ReturnsListOfPatients()]] - `calls` [INFERRED]
-- [[dot-getAllPatients_ReturnsListOfPatients()]] - `calls` [EXTRACTED]
 - [[dot-getAllergies()]] - `method` [EXTRACTED]
 - [[dot-getContactEmail()]] - `method` [EXTRACTED]
 - [[dot-getContactPhone()]] - `method` [EXTRACTED]
@@ -64,18 +63,10 @@ tags:
 - [[dot-setSunExposure()]] - `method` [EXTRACTED]
 - [[dot-setSurgicalHistory()]] - `method` [EXTRACTED]
 - [[dot-setToxicHabits()]] - `method` [EXTRACTED]
-- [[dot-setUp()]] - `calls` [EXTRACTED]
 - [[dot-setUpdatedAt()]] - `method` [EXTRACTED]
-- [[dot-updatePatient()]] - `references` [EXTRACTED]
 - [[dot-updatePatient()_1]] - `references` [EXTRACTED]
-- [[dot-updatePatient_AgeGreaterThan150_ThrowsIllegalArgumentException()]] - `calls` [EXTRACTED]
+- [[dot-updatePatient()]] - `references` [EXTRACTED]
 - [[dot-updatePatient_Authenticated_Returns200()]] - `calls` [INFERRED]
-- [[dot-updatePatient_DuplicateDniBelongingToAnotherPatient_ThrowsIllegalArgumentException()]] - `calls` [EXTRACTED]
-- [[dot-updatePatient_NegativeAge_ThrowsIllegalArgumentException()]] - `calls` [EXTRACTED]
-- [[dot-updatePatient_NotFound_ThrowsIllegalArgumentException()]] - `calls` [EXTRACTED]
-- [[dot-updatePatient_NullId_ThrowsIllegalArgumentException()]] - `calls` [EXTRACTED]
-- [[dot-updatePatient_SameDniForCurrentPatient_Success()]] - `calls` [EXTRACTED]
-- [[dot-updatePatient_Success_UpdatesFieldsAndSaves()]] - `calls` [EXTRACTED]
 - [[Appointment]] - `references` [EXTRACTED]
 - [[Entity]] - `references` [EXTRACTED]
 - [[Patient.java]] - `contains` [EXTRACTED]
@@ -87,5 +78,6 @@ tags:
 - [[PatientServiceTest]] - `references` [EXTRACTED]
 - [[PatientServiceTest.java]] - `imports` [EXTRACTED]
 - [[Table]] - `references` [EXTRACTED]
+- [[com.fasterxml.jackson.annotation.JsonIgnoreProperties]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Patient

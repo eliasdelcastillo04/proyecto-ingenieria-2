@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/AppointmentPaymentTest.java"
 type: "code"
-community: "PatientControllerTest"
+community: "PaymentPreferenceResponse"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/PaymentPreferenceResponse
 ---
 
 # AppointmentPaymentTest.java
@@ -15,16 +15,15 @@ tags:
 - [[Appointment]] - `imports` [EXTRACTED]
 - [[AppointmentPaymentTest]] - `contains` [EXTRACTED]
 - [[AppointmentRepository]] - `imports` [EXTRACTED]
-- [[AppointmentStatus]] - `imports` [EXTRACTED]
-- [[AppointmentStatus.java]] - `imports` [EXTRACTED]
-- [[PaymentPreferenceResponse]] - `imports` [EXTRACTED]
+- [[AppointmentStatus_1]] - `imports` [EXTRACTED]
+- [[PaymentPreferenceResponse_1]] - `imports` [EXTRACTED]
 - [[PaymentPreferenceResponse.java]] - `imports` [EXTRACTED]
 - [[Profile]] - `imports` [EXTRACTED]
 - [[Profile.java]] - `imports` [EXTRACTED]
-- [[UserRole]] - `imports` [EXTRACTED]
+- [[UserRole_1]] - `imports` [EXTRACTED]
 - [[org.junit.jupiter.api.BeforeEach]] - `imports` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `imports` [EXTRACTED]
 - [[org.junit.jupiter.api.extension.ExtendWith]] - `imports` [EXTRACTED]
 - [[org.mockito.junit.jupiter.MockitoExtension]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse

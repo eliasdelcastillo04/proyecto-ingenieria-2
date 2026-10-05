@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "a61a7ba4ecc0c472",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b587e3b4652588c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8388ec35922e93f9",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "graph.canvas",
+                "viewState": {
+                  "x": 5928.795429799432,
+                  "y": 2257.222148997136,
+                  "zoom": -3.0811266704130578
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "graph"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d512c713a57bd8cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e8df82dd95eb7ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38a83aa61339f8c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "caccd26556fe1825",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "6e36b9b9c2297536",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "09a562533a25955a",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf1e73be7155a199",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d8fea5229c4da8ba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Patient.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "d78c022b41c68cbb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Patient.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "1d9c39af03d8f622",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "ccb37b050cfa048b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "ee2efd9ffa54b788",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Patient.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "8388ec35922e93f9",
+  "lastOpenFiles": [
+    "org.junit.jupiter.api.Test.md",
+    "Patient.md",
+    "_COMMUNITY_BackendApplication.md"
+  ]
+}

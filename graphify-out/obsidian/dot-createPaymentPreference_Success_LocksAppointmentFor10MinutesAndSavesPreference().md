@@ -1,28 +1,20 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/AppointmentPaymentTest.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "MercadoPagoService"
 location: "L55"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/PaymentPreferenceResponse
+  - graphify/EXTRACTED
+  - community/MercadoPagoService
 ---
 
 # .createPaymentPreference_Success_LocksAppointmentFor10MinutesAndSavesPreference()
 
 ## Connections
-- [[dot-createPaymentPreference()]] - `calls` [INFERRED]
+- [[dot-createPaymentPreference()_1]] - `calls` [INFERRED]
 - [[dot-createPreference()]] - `calls` [INFERRED]
-- [[dot-getAppointmentId()]] - `calls` [INFERRED]
-- [[dot-getDepositAmount()]] - `calls` [INFERRED]
-- [[dot-getLockedUntil()]] - `calls` [INFERRED]
-- [[dot-getLockedUntil()_1]] - `calls` [INFERRED]
-- [[dot-getMercadoPagoPreferenceId()]] - `calls` [INFERRED]
-- [[dot-getPaymentUrl()]] - `calls` [INFERRED]
-- [[dot-getPreferenceId()]] - `calls` [INFERRED]
-- [[dot-getStatus()]] - `calls` [INFERRED]
 - [[AppointmentPaymentTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

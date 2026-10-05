@@ -1,18 +1,17 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "PaymentPreferenceResponse"
-location: "L84"
+community: "Appointment"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/Appointment
 ---
 
 # .setMercadoPagoPreferenceId()
 
 ## Connections
-- [[dot-createPaymentPreference()]] - `calls` [INFERRED]
 - [[Appointment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/Appointment

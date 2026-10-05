@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L56"
+community: "Appointment"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/Appointment
 ---
 
 # .onUpdate()
@@ -15,4 +15,4 @@ tags:
 - [[Appointment]] - `method` [EXTRACTED]
 - [[PreUpdate_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/Appointment

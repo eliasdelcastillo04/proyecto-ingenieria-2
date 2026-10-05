@@ -1,13 +1,14 @@
 ---
 type: community
-members: 2
+members: 3
 ---
 
 # vercel.json
 
-**Members:** 2 nodes
+**Members:** 3 nodes
 
 ## Members
+- [[headers]] - code - frontend/vercel.json
 - [[rewrites]] - code - frontend/vercel.json
 - [[vercel.json]] - code - frontend/vercel.json
 

@@ -1,61 +1,75 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L8"
+community: "Appointment"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/Appointment
 ---
 
 # Appointment
 
 ## Connections
+- [[dot-Payment()]] - `references` [EXTRACTED]
 - [[dot-createAppointment()_1]] - `references` [EXTRACTED]
 - [[dot-createAppointment()]] - `references` [EXTRACTED]
 - [[dot-createAppointment_Authenticated_ReturnsCreatedAppointment()]] - `calls` [INFERRED]
-- [[dot-getAllAppointments()]] - `references` [EXTRACTED]
+- [[dot-delete()_1]] - `references` [EXTRACTED]
+- [[dot-delete()]] - `references` [EXTRACTED]
+- [[dot-findAll()_1]] - `references` [EXTRACTED]
+- [[dot-findAll()]] - `references` [EXTRACTED]
+- [[dot-findById()_1]] - `references` [EXTRACTED]
+- [[dot-findById()]] - `references` [EXTRACTED]
+- [[dot-findByStatus()_1]] - `references` [EXTRACTED]
+- [[dot-findByStatus()]] - `references` [EXTRACTED]
 - [[dot-getAllAppointments()_1]] - `references` [EXTRACTED]
+- [[dot-getAllAppointments()]] - `references` [EXTRACTED]
 - [[dot-getAllAppointments_Authenticated_ReturnsAppointmentsList()]] - `calls` [INFERRED]
-- [[dot-getAllAppointments_ReturnsAppointmentsList()]] - `calls` [EXTRACTED]
+- [[dot-getAppointment()_1]] - `references` [EXTRACTED]
 - [[dot-getAppointment()]] - `references` [EXTRACTED]
-- [[dot-getAppointmentById()]] - `references` [EXTRACTED]
 - [[dot-getAppointmentById()_1]] - `references` [EXTRACTED]
+- [[dot-getAppointmentById()]] - `references` [EXTRACTED]
 - [[dot-getAppointmentById_Found_Returns200()]] - `calls` [INFERRED]
-- [[dot-getCreatedAt()_1]] - `method` [EXTRACTED]
+- [[dot-getCreatedAt()_3]] - `method` [EXTRACTED]
 - [[dot-getDoctor()]] - `method` [EXTRACTED]
-- [[dot-getId()_1]] - `method` [EXTRACTED]
-- [[dot-getLockedUntil()_1]] - `method` [EXTRACTED]
+- [[dot-getId()_3]] - `method` [EXTRACTED]
+- [[dot-getLockedUntil()]] - `method` [EXTRACTED]
 - [[dot-getMercadoPagoPaymentId()]] - `method` [EXTRACTED]
 - [[dot-getMercadoPagoPreferenceId()]] - `method` [EXTRACTED]
 - [[dot-getPatient()]] - `method` [EXTRACTED]
 - [[dot-getService()]] - `method` [EXTRACTED]
-- [[dot-getStatus()]] - `method` [EXTRACTED]
+- [[dot-getStatus()_1]] - `method` [EXTRACTED]
 - [[dot-getTimeRange()]] - `method` [EXTRACTED]
 - [[dot-getUpdatedAt()_1]] - `method` [EXTRACTED]
-- [[dot-onCreate()_1]] - `method` [EXTRACTED]
+- [[dot-hasCollision()]] - `references` [EXTRACTED]
+- [[dot-onCreate()_4]] - `method` [EXTRACTED]
 - [[dot-onUpdate()_1]] - `method` [EXTRACTED]
+- [[dot-save()_1]] - `references` [EXTRACTED]
+- [[dot-save()]] - `references` [EXTRACTED]
+- [[dot-setAppointment()_1]] - `references` [EXTRACTED]
 - [[dot-setAppointment()]] - `references` [EXTRACTED]
-- [[dot-setCreatedAt()_1]] - `method` [EXTRACTED]
+- [[dot-setCreatedAt()_3]] - `method` [EXTRACTED]
 - [[dot-setDoctor()]] - `method` [EXTRACTED]
-- [[dot-setId()_1]] - `method` [EXTRACTED]
-- [[dot-setLockedUntil()_1]] - `method` [EXTRACTED]
+- [[dot-setId()_4]] - `method` [EXTRACTED]
+- [[dot-setLockedUntil()]] - `method` [EXTRACTED]
 - [[dot-setMercadoPagoPaymentId()]] - `method` [EXTRACTED]
 - [[dot-setMercadoPagoPreferenceId()]] - `method` [EXTRACTED]
 - [[dot-setPatient()]] - `method` [EXTRACTED]
 - [[dot-setService()]] - `method` [EXTRACTED]
-- [[dot-setStatus()]] - `method` [EXTRACTED]
+- [[dot-setStatus()_1]] - `method` [EXTRACTED]
 - [[dot-setTimeRange()]] - `method` [EXTRACTED]
-- [[dot-setUp()_1]] - `calls` [EXTRACTED]
-- [[dot-setUp()_2]] - `calls` [EXTRACTED]
 - [[dot-setUpdatedAt()_1]] - `method` [EXTRACTED]
 - [[dot-updateStatus()_1]] - `references` [EXTRACTED]
 - [[dot-updateStatus()]] - `references` [EXTRACTED]
 - [[dot-updateStatus_Authenticated_ReturnsUpdatedAppointment()]] - `calls` [INFERRED]
+- [[AnalyticsController.java]] - `imports` [EXTRACTED]
 - [[Appointment.java]] - `contains` [EXTRACTED]
+- [[AppointmentCleanupScheduler.java]] - `imports` [EXTRACTED]
 - [[AppointmentController.java]] - `imports` [EXTRACTED]
 - [[AppointmentControllerTest.java]] - `imports` [EXTRACTED]
+- [[AppointmentDaoImpl.java]] - `imports` [EXTRACTED]
 - [[AppointmentPaymentTest]] - `references` [EXTRACTED]
 - [[AppointmentPaymentTest.java]] - `imports` [EXTRACTED]
 - [[AppointmentRepository]] - `references` [EXTRACTED]
@@ -63,12 +77,16 @@ tags:
 - [[AppointmentService.java]] - `imports` [EXTRACTED]
 - [[AppointmentServiceTest]] - `references` [EXTRACTED]
 - [[AppointmentServiceTest.java]] - `imports` [EXTRACTED]
-- [[AppointmentStatus]] - `references` [EXTRACTED]
+- [[AppointmentStatus_1]] - `references` [EXTRACTED]
 - [[Consultation]] - `references` [EXTRACTED]
-- [[Entity_1]] - `references` [EXTRACTED]
+- [[Entity_4]] - `references` [EXTRACTED]
+- [[IAppointmentDao.java]] - `imports` [EXTRACTED]
 - [[Patient]] - `references` [EXTRACTED]
+- [[Payment]] - `references` [EXTRACTED]
+- [[PaymentService.java]] - `imports` [EXTRACTED]
 - [[Profile]] - `references` [EXTRACTED]
 - [[ServiceEntity]] - `references` [EXTRACTED]
-- [[Table_1]] - `references` [EXTRACTED]
+- [[Table_4]] - `references` [EXTRACTED]
+- [[com.fasterxml.jackson.annotation.JsonIgnoreProperties]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/Appointment

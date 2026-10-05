@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/MercadoPagoService.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "AppointmentService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/AppointmentService
 ---
 
 # MercadoPagoService.java
@@ -17,4 +17,4 @@ tags:
 - [[org.springframework.stereotype.Service]] - `imports` [EXTRACTED]
 - [[org.springframework.web.client.RestTemplate]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/AppointmentService

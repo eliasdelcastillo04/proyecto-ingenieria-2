@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/PatientService.java"
 type: "code"
-community: "Patient"
+community: "AppointmentService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/AppointmentService
 ---
 
 # PatientService.java
@@ -18,4 +18,4 @@ tags:
 - [[org.springframework.stereotype.Service]] - `imports` [EXTRACTED]
 - [[org.springframework.transaction.annotation.Transactional]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/AppointmentService

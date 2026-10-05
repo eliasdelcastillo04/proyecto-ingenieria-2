@@ -13,5 +13,6 @@ tags:
 
 ## Connections
 - [[ServiceEntity]] - `contains` [EXTRACTED]
+- [[com.fasterxml.jackson.annotation.JsonIgnoreProperties]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ServiceEntity

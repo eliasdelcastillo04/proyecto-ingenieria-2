@@ -1,17 +1,26 @@
 ---
 source_file: "frontend/package.json"
-type: "code"
-community: "package.json"
-location: "L18"
+type: "concept"
+community: "react"
+location: "L25"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/react
 ---
 
 # react-router-dom
 
 ## Connections
-- [[dependencies]] - `contains` [EXTRACTED]
+- [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[BookingStatusViews.tsx]] - `imports_from` [EXTRACTED]
+- [[BookingWizard.tsx]] - `imports_from` [EXTRACTED]
+- [[DashboardLayout.tsx]] - `imports_from` [EXTRACTED]
+- [[LandingPageView.tsx]] - `imports_from` [EXTRACTED]
+- [[LoginView.tsx]] - `imports_from` [EXTRACTED]
+- [[PasswordRecoveryView.tsx]] - `imports_from` [EXTRACTED]
+- [[ServicesCatalogView.tsx]] - `imports_from` [EXTRACTED]
+- [[main.tsx]] - `imports_from` [EXTRACTED]
+- [[package.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/concept #graphify/EXTRACTED #community/react

@@ -1,17 +1,17 @@
 ---
 source_file: "frontend/package.json"
-type: "concept"
-community: "package.json"
-location: "L29"
+type: "code"
+community: "devDependencies"
+location: "L34"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/devDependencies
 ---
 
 # autoprefixer
 
 ## Connections
-- [[package.json]] - `imports` [EXTRACTED]
+- [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/devDependencies

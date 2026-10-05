@@ -2,19 +2,16 @@
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Patient.java"
 type: "code"
 community: "Patient"
-location: "L92"
+location: "L95"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Patient
 ---
 
 # .setProfession()
 
 ## Connections
-- [[dot-setUp()]] - `calls` [INFERRED]
-- [[dot-updatePatient()_1]] - `calls` [INFERRED]
-- [[dot-updatePatient_Success_UpdatesFieldsAndSaves()]] - `calls` [INFERRED]
 - [[Patient]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/Patient

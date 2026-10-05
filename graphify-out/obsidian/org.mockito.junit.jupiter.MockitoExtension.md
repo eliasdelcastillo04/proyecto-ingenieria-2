@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PatientControllerTest"
+community: "PaymentRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/PaymentRepository
 ---
 
 # org.mockito.junit.jupiter.MockitoExtension
@@ -19,5 +19,7 @@ tags:
 - [[JwtAuthenticationFilterTest.java]] - `imports` [EXTRACTED]
 - [[PatientServiceTest]] - `references` [EXTRACTED]
 - [[PatientServiceTest.java]] - `imports` [EXTRACTED]
+- [[PaymentServiceTest]] - `references` [EXTRACTED]
+- [[PaymentServiceTest.java]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/PaymentRepository

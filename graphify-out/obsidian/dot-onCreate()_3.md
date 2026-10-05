@@ -1,18 +1,18 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Payment.java"
 type: "code"
-community: "ServiceEntity"
-location: "L33"
+community: "Payment"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ServiceEntity
+  - community/Payment
 ---
 
 # .onCreate()
 
 ## Connections
+- [[Payment]] - `method` [EXTRACTED]
 - [[PrePersist_3]] - `references` [EXTRACTED]
-- [[ServiceEntity]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ServiceEntity
+#graphify/code #graphify/EXTRACTED #community/Payment

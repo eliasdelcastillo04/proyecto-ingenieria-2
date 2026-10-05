@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "org.junit.jupiter.api.Test"
+community: "Appointment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/Appointment
 ---
 
 # PreUpdate
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-onUpdate()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/Appointment

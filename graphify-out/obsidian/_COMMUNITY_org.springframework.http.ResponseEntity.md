@@ -1,39 +1,38 @@
 ---
 type: community
-members: 29
+members: 28
 ---
 
 # org.springframework.http.ResponseEntity
 
-**Members:** 29 nodes
+**Members:** 28 nodes
 
 ## Members
 - [[dot-AppointmentController()]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
-- [[dot-CreatePaymentPreferenceRequest()]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
 - [[dot-cancelAppointment()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
 - [[dot-createAppointment()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
-- [[dot-createPaymentPreference()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
-- [[dot-getDepositAmount()_1]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
-- [[dot-getPayerEmail()]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
-- [[dot-getTitle()_1]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
+- [[dot-getAllAppointments()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-getAmount()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-getAppointmentById()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-getConcept()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-getRecordedBy()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
 - [[dot-handleIllegalArgument()]] - code - backend/src/main/java/com/dermacare/backend/controllers/GlobalExceptionHandler.java
 - [[dot-handleIllegalState()]] - code - backend/src/main/java/com/dermacare/backend/controllers/GlobalExceptionHandler.java
-- [[dot-login()]] - code - backend/src/main/java/com/dermacare/backend/controllers/AuthController.java
-- [[dot-setDepositAmount()_1]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
-- [[dot-setPayerEmail()]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
-- [[dot-setTitle()_1]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
+- [[dot-registerCashPayment()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-setAmount()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-setConcept()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[dot-setRecordedBy()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
 - [[dot-updateStatus()_1]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
 - [[AppointmentController]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
 - [[AppointmentController.java]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
-- [[CreatePaymentPreferenceRequest]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
-- [[CreatePaymentPreferenceRequest.java]] - code - backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java
+- [[CashPaymentRequest]] - code - backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java
+- [[GetMapping_1]] - code
 - [[GlobalExceptionHandler]] - code - backend/src/main/java/com/dermacare/backend/controllers/GlobalExceptionHandler.java
 - [[GlobalExceptionHandler.java]] - code - backend/src/main/java/com/dermacare/backend/controllers/GlobalExceptionHandler.java
 - [[PatchMapping]] - code
-- [[PostMapping_1]] - code
-- [[PostMapping_2]] - code
-- [[RequestMapping_2]] - code
-- [[RestController_2]] - code
+- [[PostMapping_3]] - code
+- [[RequestMapping_3]] - code
+- [[RestController_3]] - code
 - [[org.springframework.http.ResponseEntity]] - code
 - [[org.springframework.web.bind.annotation.ExceptionHandler]] - code
 - [[org.springframework.web.bind.annotation.RestControllerAdvice]] - code
@@ -46,15 +45,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_org.junit.jupiter.api.Test]]
-- 6 edges to [[_COMMUNITY_PaymentPreferenceResponse]]
-- 4 edges to [[_COMMUNITY_Patient]]
+- 5 edges to [[_COMMUNITY_Appointment]]
+- 5 edges to [[_COMMUNITY_PaymentService]]
+- 4 edges to [[_COMMUNITY_MercadoPagoService]]
+- 4 edges to [[_COMMUNITY_AppointmentService]]
+- 4 edges to [[_COMMUNITY_org.junit.jupiter.api.Test]]
+- 4 edges to [[_COMMUNITY_PatientService]]
+- 3 edges to [[_COMMUNITY_AnalyticsController.java]]
+- 2 edges to [[_COMMUNITY_Payment]]
+- 2 edges to [[_COMMUNITY_AppointmentStatus]]
 - 2 edges to [[_COMMUNITY_JwtService]]
-- 2 edges to [[_COMMUNITY_PatientControllerTest]]
+- 1 edge to [[_COMMUNITY_PaymentPreferenceResponse]]
+- 1 edge to [[_COMMUNITY_PaymentRepository]]
 
 ## Top bridge nodes
-- [[org.springframework.http.ResponseEntity]] - degree 14, connects to 3 communities
-- [[AppointmentController.java]] - degree 7, connects to 3 communities
-- [[AppointmentController]] - degree 11, connects to 2 communities
-- [[dot-updateStatus()_1]] - degree 6, connects to 2 communities
-- [[dot-createPaymentPreference()_1]] - degree 9, connects to 1 community
+- [[AppointmentController.java]] - degree 9, connects to 7 communities
+- [[org.springframework.http.ResponseEntity]] - degree 20, connects to 5 communities
+- [[AppointmentController]] - degree 14, connects to 3 communities
+- [[dot-updateStatus()_1]] - degree 6, connects to 3 communities
+- [[dot-registerCashPayment()_1]] - degree 9, connects to 2 communities

@@ -11,6 +11,8 @@ tags:
 # org.springframework.stereotype.Component
 
 ## Connections
+- [[AppointmentCleanupScheduler]] - `references` [EXTRACTED]
+- [[AppointmentCleanupScheduler.java]] - `imports` [EXTRACTED]
 - [[JwtAuthenticationFilter]] - `references` [EXTRACTED]
 - [[JwtAuthenticationFilter.java]] - `imports` [EXTRACTED]
 

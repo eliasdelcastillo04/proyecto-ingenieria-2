@@ -12,6 +12,6 @@ tags:
 # .setTitle()
 
 ## Connections
-- [[PaymentPreferenceResponse]] - `method` [EXTRACTED]
+- [[PaymentPreferenceResponse_1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse

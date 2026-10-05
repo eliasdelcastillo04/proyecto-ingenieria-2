@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "AppointmentService"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/AppointmentService
 ---
 
 # .AppointmentService()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AppointmentRepository]] - `references` [EXTRACTED]
 - [[AppointmentService]] - `method` [EXTRACTED]
-- [[MercadoPagoService]] - `calls` [EXTRACTED]
+- [[MercadoPagoService]] - `references` [EXTRACTED]
+- [[org.springframework.beans.factory.annotation.Autowired]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/AppointmentService

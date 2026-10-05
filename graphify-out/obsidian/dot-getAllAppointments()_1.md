@@ -1,23 +1,20 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
+source_file: "backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L31"
+community: "org.springframework.http.ResponseEntity"
+location: "L29"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/orgjunitjupiterapiTest
+  - graphify/EXTRACTED
+  - community/orgspringframeworkhttpResponseEntity
 ---
 
 # .getAllAppointments()
 
 ## Connections
 - [[dot-getAllAppointments()]] - `calls` [INFERRED]
-- [[dot-getAllAppointments_Authenticated_ReturnsAppointmentsList()]] - `calls` [INFERRED]
-- [[dot-getAllAppointments_ReturnsAppointmentsList()]] - `calls` [INFERRED]
-- [[dot-getAllAppointments_WhenEmpty_ReturnsEmptyList()]] - `calls` [INFERRED]
 - [[Appointment]] - `references` [EXTRACTED]
-- [[AppointmentService]] - `method` [EXTRACTED]
-- [[org.springframework.transaction.annotation.Transactional]] - `references` [EXTRACTED]
+- [[AppointmentController]] - `method` [EXTRACTED]
+- [[GetMapping_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity

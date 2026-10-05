@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Patient.java"
 type: "code"
 community: "Patient"
-location: "L63"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED

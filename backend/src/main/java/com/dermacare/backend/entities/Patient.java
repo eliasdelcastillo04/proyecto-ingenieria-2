@@ -3,8 +3,11 @@ package com.dermacare.backend.entities;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "patients")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Patient {
 
     @Id

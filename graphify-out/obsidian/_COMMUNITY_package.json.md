@@ -1,61 +1,35 @@
 ---
 type: community
-members: 48
+members: 22
 ---
 
 # package.json
 
-**Members:** 48 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[@stryker-mutatorcore]] - code - frontend/package.json
-- [[@stryker-mutatorcore_1]] - concept - frontend/package.json
-- [[@stryker-mutatorvitest-runner]] - code - frontend/package.json
-- [[@stryker-mutatorvitest-runner_1]] - concept - frontend/package.json
-- [[@testing-libraryjest-dom]] - code - frontend/package.json
-- [[@testing-libraryjest-dom_1]] - concept - frontend/package.json
-- [[@testing-libraryreact_1]] - code - frontend/package.json
-- [[@testing-libraryuser-event_1]] - code - frontend/package.json
-- [[@typesreact]] - code - frontend/package.json
-- [[@typesreact_1]] - concept - frontend/package.json
-- [[@typesreact-dom]] - code - frontend/package.json
-- [[@typesreact-dom_1]] - concept - frontend/package.json
-- [[@vitejsplugin-react]] - code - frontend/package.json
-- [[@vitejsplugin-react_1]] - concept - frontend/package.json
-- [[autoprefixer]] - code - frontend/package.json
-- [[autoprefixer_1]] - concept - frontend/package.json
-- [[build]] - code - frontend/package.json
-- [[dependencies]] - code - frontend/package.json
-- [[dev]] - code - frontend/package.json
-- [[devDependencies]] - code - frontend/package.json
-- [[jsdom]] - code - frontend/package.json
-- [[jsdom_1]] - concept - frontend/package.json
-- [[lucide-react]] - code - frontend/package.json
-- [[lucide-react_1]] - concept - frontend/package.json
+- [[@hookformresolvers]] - concept - frontend/package.json
+- [[@supabaseserver]] - concept - frontend/package.json
+- [[@tanstackreact-query]] - concept - frontend/package.json
+- [[@typesnode]] - concept - frontend/package.json
+- [[@typesreact]] - concept - frontend/package.json
+- [[@typesreact-dom]] - concept - frontend/package.json
+- [[autoprefixer]] - concept - frontend/package.json
+- [[axios]] - concept - frontend/package.json
+- [[clsx]] - concept - frontend/package.json
+- [[motion]] - concept - frontend/package.json
 - [[name]] - code - frontend/package.json
 - [[package.json]] - code - frontend/package.json
-- [[postcss]] - code - frontend/package.json
-- [[postcss_1]] - concept - frontend/package.json
-- [[preview]] - code - frontend/package.json
+- [[postcss]] - concept - frontend/package.json
 - [[private]] - code - frontend/package.json
-- [[qrcode.react_1]] - code - frontend/package.json
-- [[react_1]] - code - frontend/package.json
-- [[react-dom]] - code - frontend/package.json
-- [[react-dom_1]] - concept - frontend/package.json
-- [[react-router-dom_1]] - code - frontend/package.json
-- [[scripts]] - code - frontend/package.json
-- [[setupTests.js]] - code - frontend/src/setupTests.js
-- [[tailwindcss_1]] - code - frontend/package.json
-- [[tailwindcss_2]] - concept - frontend/package.json
-- [[test]] - code - frontend/package.json
-- [[testmutation]] - code - frontend/package.json
+- [[qrcode.react]] - concept - frontend/package.json
+- [[react-hook-form]] - concept - frontend/package.json
+- [[tailwind-merge]] - concept - frontend/package.json
+- [[tailwindcss_1]] - concept - frontend/package.json
 - [[type]] - code - frontend/package.json
+- [[typescript]] - concept - frontend/package.json
 - [[version]] - code - frontend/package.json
-- [[vite]] - code - frontend/package.json
-- [[vite_1]] - concept - frontend/package.json
-- [[vite.config.js]] - code - frontend/vite.config.js
-- [[vitest_1]] - code - frontend/package.json
-- [[vitest_2]] - concept - frontend/package.json
+- [[zod]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -65,9 +39,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_App.jsx]]
+- 3 edges to [[_COMMUNITY_react]]
+- 2 edges to [[_COMMUNITY_cn]]
+- 2 edges to [[_COMMUNITY_api.ts]]
+- 2 edges to [[_COMMUNITY_GlideSelect.tsx]]
+- 2 edges to [[_COMMUNITY_vite.config.ts]]
+- 1 edge to [[_COMMUNITY_supabaseClient.ts]]
+- 1 edge to [[_COMMUNITY_puppeteer]]
+- 1 edge to [[_COMMUNITY_dependencies]]
+- 1 edge to [[_COMMUNITY_devDependencies]]
+- 1 edge to [[_COMMUNITY_scripts]]
 
 ## Top bridge nodes
-- [[package.json]] - degree 26, connects to 1 community
-- [[setupTests.js]] - degree 3, connects to 1 community
-- [[vitest_2]] - degree 3, connects to 1 community
+- [[package.json]] - degree 33, connects to 8 communities
+- [[axios]] - degree 2, connects to 1 community
+- [[clsx]] - degree 2, connects to 1 community
+- [[qrcode.react]] - degree 2, connects to 1 community
+- [[tailwind-merge]] - degree 2, connects to 1 community

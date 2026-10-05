@@ -1,20 +1,20 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "Patient"
+community: "PatientServiceTest"
 location: "L213"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientServiceTest
 ---
 
 # .updatePatient_NullId_ThrowsIllegalArgumentException()
 
 ## Connections
-- [[dot-updatePatient()_1]] - `calls` [INFERRED]
-- [[Patient]] - `calls` [EXTRACTED]
+- [[dot-updatePatient()]] - `calls` [INFERRED]
+- [[Patient_2]] - `calls` [EXTRACTED]
 - [[PatientServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientServiceTest

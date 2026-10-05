@@ -12,6 +12,7 @@ tags:
 # vercel.json
 
 ## Connections
+- [[headers]] - `contains` [EXTRACTED]
 - [[rewrites]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/verceljson

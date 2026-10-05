@@ -12,7 +12,7 @@ tags:
 # .getAppointmentById_NotFound_Returns404()
 
 ## Connections
-- [[dot-getAppointmentById()_1]] - `calls` [INFERRED]
+- [[dot-getAppointmentById()]] - `calls` [INFERRED]
 - [[AppointmentControllerTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 

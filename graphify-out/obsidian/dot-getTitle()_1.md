@@ -1,18 +1,18 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/dtos/CreatePaymentPreferenceRequest.java"
 type: "code"
-community: "org.springframework.http.ResponseEntity"
+community: "MercadoPagoService"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgspringframeworkhttpResponseEntity
+  - community/MercadoPagoService
 ---
 
 # .getTitle()
 
 ## Connections
-- [[dot-createPaymentPreference()_1]] - `calls` [INFERRED]
+- [[dot-createPaymentPreference()]] - `calls` [INFERRED]
 - [[CreatePaymentPreferenceRequest]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgspringframeworkhttpResponseEntity
+#graphify/code #graphify/EXTRACTED #community/MercadoPagoService

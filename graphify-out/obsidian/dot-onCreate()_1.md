@@ -1,18 +1,18 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/Appointment.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L50"
+community: "ServiceEntity"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/ServiceEntity
 ---
 
 # .onCreate()
 
 ## Connections
-- [[Appointment]] - `method` [EXTRACTED]
 - [[PrePersist_1]] - `references` [EXTRACTED]
+- [[ServiceEntity]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/ServiceEntity

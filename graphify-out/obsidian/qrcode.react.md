@@ -1,18 +1,18 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "App.jsx"
-location: "L15"
+community: "package.json"
+location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Appjsx
+  - community/packagejson
 ---
 
 # qrcode.react
 
 ## Connections
-- [[PaymentModal.jsx]] - `imports_from` [EXTRACTED]
+- [[RegisterPaymentStep.tsx]] - `imports_from` [EXTRACTED]
 - [[package.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Appjsx
+#graphify/concept #graphify/EXTRACTED #community/packagejson

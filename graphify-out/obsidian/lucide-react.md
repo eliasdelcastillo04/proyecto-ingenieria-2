@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "package.json"
-location: "L14"
+community: "dependencies"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/dependencies
 ---
 
 # lucide-react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/dependencies

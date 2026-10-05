@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "package.json"
-location: "L17"
+community: "dependencies"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/dependencies
 ---
 
 # react-dom
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/dependencies

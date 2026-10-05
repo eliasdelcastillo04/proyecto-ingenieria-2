@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/services/PatientService.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L129"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Patient
+  - community/PatientService
 ---
 
 # .deletePatient()
@@ -17,4 +17,4 @@ tags:
 - [[dot-deletePatient_Success_DeletesById()]] - `calls` [INFERRED]
 - [[PatientService]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Patient
+#graphify/code #graphify/INFERRED #community/PatientService

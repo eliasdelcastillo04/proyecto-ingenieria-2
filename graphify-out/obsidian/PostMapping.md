@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Patient"
+community: "PaymentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PaymentService
 ---
 
 # PostMapping
 
 ## Connections
-- [[dot-createPatient()]] - `references` [EXTRACTED]
+- [[dot-handleMercadoPagoWebhook()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PaymentService

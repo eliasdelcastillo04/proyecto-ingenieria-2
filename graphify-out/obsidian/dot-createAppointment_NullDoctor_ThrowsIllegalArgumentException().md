@@ -2,7 +2,7 @@
 source_file: "backend/src/test/java/com/dermacare/backend/services/AppointmentServiceTest.java"
 type: "code"
 community: "org.junit.jupiter.api.Test"
-location: "L143"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-createAppointment()]] - `calls` [INFERRED]
-- [[dot-setDoctor()]] - `calls` [INFERRED]
 - [[AppointmentServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 

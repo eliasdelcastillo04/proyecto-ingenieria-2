@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "package.json"
+community: "scripts"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/scripts
 ---
 
 # scripts
@@ -16,7 +16,5 @@ tags:
 - [[dev]] - `contains` [EXTRACTED]
 - [[package.json]] - `contains` [EXTRACTED]
 - [[preview]] - `contains` [EXTRACTED]
-- [[test]] - `contains` [EXTRACTED]
-- [[testmutation]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/scripts

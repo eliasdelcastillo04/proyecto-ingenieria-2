@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # .getAllPatients_WhenEmpty_ReturnsEmptyList()
@@ -16,4 +16,4 @@ tags:
 - [[PatientServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

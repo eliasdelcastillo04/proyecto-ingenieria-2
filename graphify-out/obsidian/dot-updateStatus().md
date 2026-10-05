@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
 type: "code"
 community: "org.junit.jupiter.api.Test"
-location: "L66"
+location: "L78"
 tags:
   - graphify/code
   - graphify/INFERRED
@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[dot-cancelAppointment()]] - `calls` [EXTRACTED]
-- [[dot-getStatus()]] - `calls` [INFERRED]
-- [[dot-setStatus()]] - `calls` [INFERRED]
 - [[dot-updateStatus()_1]] - `calls` [INFERRED]
 - [[dot-updateStatus_Authenticated_ReturnsUpdatedAppointment()]] - `calls` [INFERRED]
 - [[dot-updateStatus_CancelledAppointmentToActive_ThrowsIllegalStateException()]] - `calls` [INFERRED]
@@ -27,6 +25,6 @@ tags:
 - [[dot-updateStatus_Success_UpdatesAndSaves()]] - `calls` [INFERRED]
 - [[Appointment]] - `references` [EXTRACTED]
 - [[AppointmentService]] - `method` [EXTRACTED]
-- [[AppointmentStatus]] - `references` [EXTRACTED]
+- [[AppointmentStatus_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/orgjunitjupiterapiTest

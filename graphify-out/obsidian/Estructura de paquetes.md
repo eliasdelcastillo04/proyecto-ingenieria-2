@@ -2,7 +2,7 @@
 source_file: "modelo_clases.md"
 type: "document"
 community: "Modelo de Clases — DermaCare Backend"
-location: "L246"
+location: "L381"
 tags:
   - graphify/document
   - graphify/EXTRACTED

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PaymentPreferenceResponse"
+community: "AppointmentService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentPreferenceResponse
+  - community/AppointmentService
 ---
 
 # org.springframework.stereotype.Service
@@ -19,5 +19,7 @@ tags:
 - [[MercadoPagoService.java]] - `imports` [EXTRACTED]
 - [[PatientService]] - `references` [EXTRACTED]
 - [[PatientService.java]] - `imports` [EXTRACTED]
+- [[PaymentService]] - `references` [EXTRACTED]
+- [[PaymentService.java]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentPreferenceResponse
+#graphify/code #graphify/EXTRACTED #community/AppointmentService

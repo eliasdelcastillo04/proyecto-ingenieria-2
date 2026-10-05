@@ -1,17 +1,17 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/Consultation.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/CalendarBlock.java"
 type: "code"
-community: "Consultation"
-location: "L89"
+community: "CalendarBlock"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Consultation
+  - community/CalendarBlock
 ---
 
 # .getCreatedAt()
 
 ## Connections
-- [[Consultation]] - `method` [EXTRACTED]
+- [[CalendarBlock]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Consultation
+#graphify/code #graphify/EXTRACTED #community/CalendarBlock

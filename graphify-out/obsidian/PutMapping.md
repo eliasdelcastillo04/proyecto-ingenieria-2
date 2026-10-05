@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Patient"
+community: "PatientService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # PutMapping
 
 ## Connections
-- [[dot-updatePatient()]] - `references` [EXTRACTED]
+- [[dot-updatePatient()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Patient"
+community: "PatientService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # DeleteMapping
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-deletePatient()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

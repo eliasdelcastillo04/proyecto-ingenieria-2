@@ -19,13 +19,10 @@ public class AppointmentService {
     private final AppointmentRepository appointmentRepository;
     private final MercadoPagoService mercadoPagoService;
 
+    @org.springframework.beans.factory.annotation.Autowired
     public AppointmentService(AppointmentRepository appointmentRepository, MercadoPagoService mercadoPagoService) {
         this.appointmentRepository = appointmentRepository;
         this.mercadoPagoService = mercadoPagoService;
-    }
-
-    public AppointmentService(AppointmentRepository appointmentRepository) {
-        this(appointmentRepository, new MercadoPagoService());
     }
 
     @Transactional(readOnly = true)
@@ -57,10 +54,25 @@ public class AppointmentService {
         }
         appointment.setTimeRange(trimmedRange);
 
+        if (hasCollision(appointment)) {
+            throw new IllegalStateException("El horario solicitado ya se encuentra ocupado o bloqueado para este profesional.");
+        }
+
         if (appointment.getStatus() == null) {
             appointment.setStatus(AppointmentStatus.AVAILABLE);
         }
         return appointmentRepository.save(appointment);
+    }
+
+    public boolean hasCollision(Appointment newAppointment) {
+        if (newAppointment.getDoctor() == null || newAppointment.getTimeRange() == null) {
+            return false;
+        }
+        return appointmentRepository.findAll().stream()
+                .filter(a -> a.getDoctor() != null && a.getDoctor().getId() != null && a.getDoctor().getId().equals(newAppointment.getDoctor().getId()))
+                .filter(a -> a.getStatus() == AppointmentStatus.CONFIRMED || a.getStatus() == AppointmentStatus.PENDING_PAYMENT)
+                .filter(a -> newAppointment.getId() == null || !newAppointment.getId().equals(a.getId()))
+                .anyMatch(a -> a.getTimeRange() != null && a.getTimeRange().trim().equals(newAppointment.getTimeRange().trim()));
     }
 
     public Appointment updateStatus(Long id, AppointmentStatus newStatus) {

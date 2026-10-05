@@ -1,21 +1,21 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/Profile.java"
 type: "code"
-community: "org.junit.jupiter.api.Test"
-location: "L37"
+community: ".getAllAppointments_Authenticated_ReturnsAppointmentsList"
+location: "L40"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/orgjunitjupiterapiTest
+  - community/getAllAppointments_Authenticated_ReturnsAppointmentsList
 ---
 
 # .setRole()
 
 ## Connections
 - [[dot-getAllAppointments_Authenticated_ReturnsAppointmentsList()]] - `calls` [INFERRED]
+- [[dot-setUp()]] - `calls` [INFERRED]
 - [[dot-setUp()_1]] - `calls` [INFERRED]
-- [[dot-setUp()_2]] - `calls` [INFERRED]
 - [[Profile]] - `method` [EXTRACTED]
-- [[UserRole]] - `references` [EXTRACTED]
+- [[UserRole_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/INFERRED #community/getAllAppointments_Authenticated_ReturnsAppointmentsList

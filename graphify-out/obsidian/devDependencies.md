@@ -1,31 +1,27 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "package.json"
-location: "L20"
+community: "devDependencies"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packagejson
+  - community/devDependencies
 ---
 
 # devDependencies
 
 ## Connections
-- [[@stryker-mutatorcore]] - `contains` [EXTRACTED]
-- [[@stryker-mutatorvitest-runner]] - `contains` [EXTRACTED]
-- [[@testing-libraryjest-dom]] - `contains` [EXTRACTED]
-- [[@testing-libraryreact_1]] - `contains` [EXTRACTED]
-- [[@testing-libraryuser-event_1]] - `contains` [EXTRACTED]
-- [[@typesreact]] - `contains` [EXTRACTED]
-- [[@typesreact-dom]] - `contains` [EXTRACTED]
+- [[@typesnode_1]] - `contains` [EXTRACTED]
+- [[@typesreact_1]] - `contains` [EXTRACTED]
+- [[@typesreact-dom_1]] - `contains` [EXTRACTED]
 - [[@vitejsplugin-react]] - `contains` [EXTRACTED]
-- [[autoprefixer]] - `contains` [EXTRACTED]
-- [[jsdom]] - `contains` [EXTRACTED]
+- [[autoprefixer_1]] - `contains` [EXTRACTED]
 - [[package.json]] - `contains` [EXTRACTED]
-- [[postcss]] - `contains` [EXTRACTED]
-- [[tailwindcss_1]] - `contains` [EXTRACTED]
+- [[postcss_1]] - `contains` [EXTRACTED]
+- [[puppeteer]] - `contains` [EXTRACTED]
+- [[tailwindcss_2]] - `contains` [EXTRACTED]
+- [[typescript_1]] - `contains` [EXTRACTED]
 - [[vite]] - `contains` [EXTRACTED]
-- [[vitest_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packagejson
+#graphify/code #graphify/EXTRACTED #community/devDependencies

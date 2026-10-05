@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "Patient"
+community: "PatientService"
 location: "L243"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Patient
+  - community/PatientService
 ---
 
 # .deletePatient_Success_DeletesById()
@@ -16,4 +16,4 @@ tags:
 - [[PatientServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Patient
+#graphify/code #graphify/EXTRACTED #community/PatientService

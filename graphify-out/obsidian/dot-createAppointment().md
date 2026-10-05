@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/services/AppointmentService.java"
 type: "code"
 community: "org.junit.jupiter.api.Test"
-location: "L44"
+location: "L41"
 tags:
   - graphify/code
   - graphify/INFERRED
@@ -21,11 +21,7 @@ tags:
 - [[dot-createAppointment_NullStatus_SetsAvailableDefaultAndSaves()]] - `calls` [INFERRED]
 - [[dot-createAppointment_Success_ReturnsSavedAppointment()]] - `calls` [INFERRED]
 - [[dot-createAppointment_ValidParenthesisTimeRange_Success()]] - `calls` [INFERRED]
-- [[dot-getDoctor()]] - `calls` [INFERRED]
-- [[dot-getStatus()]] - `calls` [INFERRED]
-- [[dot-getTimeRange()]] - `calls` [INFERRED]
-- [[dot-setStatus()]] - `calls` [INFERRED]
-- [[dot-setTimeRange()]] - `calls` [INFERRED]
+- [[dot-hasCollision()]] - `calls` [EXTRACTED]
 - [[Appointment]] - `references` [EXTRACTED]
 - [[AppointmentService]] - `method` [EXTRACTED]
 

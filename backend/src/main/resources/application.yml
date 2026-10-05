@@ -15,7 +15,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
 
 jwt:
   secret: ${JWT_SECRET:413F4428472B4B6250655368566D5970337336763979244226452948404D6351}
   expiration: 86400000 # 24 hours
+
+mercadopago:
+  access-token: ${MERCADO_PAGO_ACCESS_TOKEN:TEST-8031893331544574-082123-75359de71994fa0989744ffa69fc1bc0-333038110}
+  public-key: ${MERCADO_PAGO_PUBLIC_KEY:TEST-7bfe7629-c425-4def-a3d2-cd5c67cd44a0}

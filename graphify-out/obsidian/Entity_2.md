@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "org.junit.jupiter.api.Test"
+community: "Profile"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/orgjunitjupiterapiTest
+  - community/Profile
 ---
 
 # Entity
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Profile]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/Profile

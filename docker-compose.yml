@@ -1,0 +1,47 @@
+name: dermacare
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: clinica-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: clinica_dermatologica
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d clinica_dermatologica"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    image: dermacare-backend:latest
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: clinica-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/clinica_dermatologica?sslmode=disable
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgrespassword
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      JWT_SECRET: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+      MERCADOPAGO_ACCESS_TOKEN: TEST-8031893331544574-082123-75359de71994fa0989744ffa69fc1bc0-333038110
+      MERCADOPAGO_PUBLIC_KEY: TEST-7bfe7629-c425-4def-a3d2-cd5c67cd44a0
+      MERCADOPAGO_WEBHOOK_SECRET: test_webhook_secret
+
+volumes:
+  postgres_data:
+    name: proyectointegrador_postgres_data
+    external: true

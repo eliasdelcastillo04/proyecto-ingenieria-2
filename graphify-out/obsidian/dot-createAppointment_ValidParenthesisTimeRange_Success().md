@@ -2,10 +2,10 @@
 source_file: "backend/src/test/java/com/dermacare/backend/services/AppointmentServiceTest.java"
 type: "code"
 community: "org.junit.jupiter.api.Test"
-location: "L230"
+location: "L233"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/orgjunitjupiterapiTest
 ---
 
@@ -13,9 +13,7 @@ tags:
 
 ## Connections
 - [[dot-createAppointment()]] - `calls` [INFERRED]
-- [[dot-getTimeRange()]] - `calls` [INFERRED]
-- [[dot-setTimeRange()]] - `calls` [INFERRED]
 - [[AppointmentServiceTest]] - `method` [EXTRACTED]
 - [[org.junit.jupiter.api.Test]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/orgjunitjupiterapiTest
+#graphify/code #graphify/EXTRACTED #community/orgjunitjupiterapiTest

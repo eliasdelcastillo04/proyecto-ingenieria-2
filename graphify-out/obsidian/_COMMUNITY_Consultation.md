@@ -8,26 +8,26 @@ members: 30
 **Members:** 30 nodes
 
 ## Members
-- [[dot-getAppointment()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-getAppointment()_1]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getBodyExam()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getComplicationsObserved()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-getCreatedAt()_4]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-getCreatedAt()_5]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getFacialExam()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getFitzpatrickPhototype()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-getId()_4]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-getId()_6]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getMaterialsUsed()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getNotes()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getPatientSatisfactionLevel()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getProcedurePerformed()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-getReasonForVisit()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-onCreate()_4]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-setAppointment()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-onCreate()_6]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-setAppointment()_1]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setBodyExam()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setComplicationsObserved()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-setCreatedAt()_4]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-setCreatedAt()_5]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setFacialExam()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setFitzpatrickPhototype()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[dot-setId()_4]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
+- [[dot-setId()_6]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setMaterialsUsed()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setNotes()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[dot-setPatientSatisfactionLevel()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
@@ -35,9 +35,9 @@ members: 30
 - [[dot-setReasonForVisit()]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[Consultation]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
 - [[Consultation.java]] - code - backend/src/main/java/com/dermacare/backend/entities/Consultation.java
-- [[Entity_4]] - code
-- [[PrePersist_4]] - code
-- [[Table_4]] - code
+- [[Entity_6]] - code
+- [[PrePersist_6]] - code
+- [[Table_6]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,9 +47,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_org.junit.jupiter.api.Test]]
+- 3 edges to [[_COMMUNITY_Appointment]]
 
 ## Top bridge nodes
 - [[Consultation]] - degree 29, connects to 1 community
-- [[dot-getAppointment()]] - degree 2, connects to 1 community
-- [[dot-setAppointment()]] - degree 2, connects to 1 community
+- [[dot-getAppointment()_1]] - degree 2, connects to 1 community
+- [[dot-setAppointment()_1]] - degree 2, connects to 1 community

@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/controllers/AppointmentController.java"
 type: "code"
 community: "org.springframework.http.ResponseEntity"
-location: "L41"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,7 @@ tags:
 - [[dot-updateStatus()]] - `calls` [INFERRED]
 - [[Appointment]] - `references` [EXTRACTED]
 - [[AppointmentController]] - `method` [EXTRACTED]
-- [[AppointmentStatus]] - `references` [EXTRACTED]
+- [[AppointmentStatus_1]] - `references` [EXTRACTED]
 - [[PatchMapping]] - `references` [EXTRACTED]
 - [[org.springframework.http.ResponseEntity]] - `references` [EXTRACTED]
 

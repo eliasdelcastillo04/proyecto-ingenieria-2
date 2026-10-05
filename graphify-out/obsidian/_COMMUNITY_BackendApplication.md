@@ -1,17 +1,18 @@
 ---
 type: community
-members: 4
+members: 5
 ---
 
 # BackendApplication
 
-**Members:** 4 nodes
+**Members:** 5 nodes
 
 ## Members
 - [[dot-main()]] - code - backend/src/main/java/com/dermacare/backend/BackendApplication.java
 - [[BackendApplication]] - code - backend/src/main/java/com/dermacare/backend/BackendApplication.java
 - [[BackendApplication.java]] - code - backend/src/main/java/com/dermacare/backend/BackendApplication.java
 - [[org.springframework.boot.autoconfigure.SpringBootApplication]] - code
+- [[org.springframework.scheduling.annotation.EnableScheduling]] - code
 
 ## Live Query (requires Dataview plugin)
 

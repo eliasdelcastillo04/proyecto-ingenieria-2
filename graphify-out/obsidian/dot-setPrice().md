@@ -2,7 +2,7 @@
 source_file: "backend/src/main/java/com/dermacare/backend/entities/ServiceEntity.java"
 type: "code"
 community: "ServiceEntity"
-location: "L52"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED

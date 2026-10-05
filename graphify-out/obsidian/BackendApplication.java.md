@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[BackendApplication]] - `contains` [EXTRACTED]
 - [[org.springframework.boot.autoconfigure.SpringBootApplication]] - `imports` [EXTRACTED]
+- [[org.springframework.scheduling.annotation.EnableScheduling]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/BackendApplication

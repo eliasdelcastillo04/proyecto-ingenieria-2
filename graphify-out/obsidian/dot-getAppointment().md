@@ -1,18 +1,18 @@
 ---
-source_file: "backend/src/main/java/com/dermacare/backend/entities/Consultation.java"
+source_file: "backend/src/main/java/com/dermacare/backend/entities/Payment.java"
 type: "code"
-community: "Consultation"
-location: "L59"
+community: "Payment"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Consultation
+  - community/Payment
 ---
 
 # .getAppointment()
 
 ## Connections
 - [[Appointment]] - `references` [EXTRACTED]
-- [[Consultation]] - `method` [EXTRACTED]
+- [[Payment]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Consultation
+#graphify/code #graphify/EXTRACTED #community/Payment

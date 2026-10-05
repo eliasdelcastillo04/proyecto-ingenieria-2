@@ -1,17 +1,17 @@
 ---
 source_file: "backend/src/main/java/com/dermacare/backend/entities/UserRole.java"
 type: "code"
-community: "PatientControllerTest"
+community: "UserRole"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/UserRole
 ---
 
 # UserRole.java
 
 ## Connections
-- [[UserRole]] - `contains` [EXTRACTED]
+- [[UserRole_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/UserRole

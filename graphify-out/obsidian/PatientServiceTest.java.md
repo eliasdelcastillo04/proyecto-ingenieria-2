@@ -1,12 +1,12 @@
 ---
 source_file: "backend/src/test/java/com/dermacare/backend/services/PatientServiceTest.java"
 type: "code"
-community: "PatientControllerTest"
+community: "PatientServiceTest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PatientControllerTest
+  - community/PatientServiceTest
 ---
 
 # PatientServiceTest.java
@@ -20,4 +20,4 @@ tags:
 - [[org.junit.jupiter.api.extension.ExtendWith]] - `imports` [EXTRACTED]
 - [[org.mockito.junit.jupiter.MockitoExtension]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PatientControllerTest
+#graphify/code #graphify/EXTRACTED #community/PatientServiceTest
